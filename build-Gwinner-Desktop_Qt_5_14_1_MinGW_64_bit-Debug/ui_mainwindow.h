@@ -86,6 +86,22 @@ public:
     QLineEdit *lineEdit_3;
     QLabel *label_8;
     QTimeEdit *timeEdit;
+    QWidget *tab_6;
+    QScrollArea *scrollArea_6;
+    QWidget *scrollAreaWidgetContents_8;
+    QVBoxLayout *verticalLayout_7;
+    QLabel *label_12;
+    QGroupBox *groupBox_16;
+    QLabel *label_20;
+    QLabel *label_25;
+    QLabel *label_21;
+    QLabel *label_24;
+    QLabel *label_26;
+    QLabel *label_22;
+    QLabel *label_27;
+    QLabel *label_23;
+    QLabel *label_28;
+    QPushButton *pushButton;
     QWidget *tab_7;
     QScrollArea *scrollArea_5;
     QWidget *scrollAreaWidgetContents_7;
@@ -115,22 +131,7 @@ public:
     QComboBox *comboBox_3;
     QLabel *label_18;
     QLineEdit *lineEdit_11;
-    QWidget *tab_6;
-    QScrollArea *scrollArea_6;
-    QWidget *scrollAreaWidgetContents_8;
-    QVBoxLayout *verticalLayout_7;
-    QLabel *label_12;
-    QGroupBox *groupBox_16;
-    QLabel *label_20;
-    QLabel *label_25;
-    QLabel *label_21;
-    QLabel *label_24;
-    QLabel *label_26;
-    QLabel *label_22;
-    QLabel *label_27;
-    QLabel *label_23;
-    QLabel *label_28;
-    QPushButton *pushButton;
+    QPushButton *pushButton_8;
     QWidget *tab_4;
     QScrollArea *scrollArea_7;
     QWidget *scrollAreaWidgetContents_9;
@@ -165,6 +166,7 @@ public:
         scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
         scrollArea_2->setGeometry(QRect(10, 10, 391, 551));
         scrollArea_2->setMinimumSize(QSize(391, 551));
+        scrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
@@ -184,29 +186,38 @@ public:
 
         groupBox_12 = new QGroupBox(scrollAreaWidgetContents_4);
         groupBox_12->setObjectName(QString::fromUtf8("groupBox_12"));
-        groupBox_12->setMinimumSize(QSize(371, 700));
-        groupBox_12->setMaximumSize(QSize(351, 700));
+        groupBox_12->setMinimumSize(QSize(361, 700));
+        groupBox_12->setMaximumSize(QSize(361, 700));
         MonButton = new QPushButton(groupBox_12);
         MonButton->setObjectName(QString::fromUtf8("MonButton"));
         MonButton->setGeometry(QRect(120, 20, 141, 81));
+        QFont font1;
+        font1.setPointSize(12);
+        MonButton->setFont(font1);
         TuesButton = new QPushButton(groupBox_12);
         TuesButton->setObjectName(QString::fromUtf8("TuesButton"));
         TuesButton->setGeometry(QRect(120, 110, 141, 81));
+        TuesButton->setFont(font1);
         WedButton = new QPushButton(groupBox_12);
         WedButton->setObjectName(QString::fromUtf8("WedButton"));
         WedButton->setGeometry(QRect(120, 200, 141, 81));
+        WedButton->setFont(font1);
         ThurButton = new QPushButton(groupBox_12);
         ThurButton->setObjectName(QString::fromUtf8("ThurButton"));
         ThurButton->setGeometry(QRect(120, 300, 141, 81));
+        ThurButton->setFont(font1);
         FriButton = new QPushButton(groupBox_12);
         FriButton->setObjectName(QString::fromUtf8("FriButton"));
         FriButton->setGeometry(QRect(120, 400, 141, 81));
+        FriButton->setFont(font1);
         SatButton = new QPushButton(groupBox_12);
         SatButton->setObjectName(QString::fromUtf8("SatButton"));
         SatButton->setGeometry(QRect(120, 500, 141, 81));
+        SatButton->setFont(font1);
         SunButton = new QPushButton(groupBox_12);
         SunButton->setObjectName(QString::fromUtf8("SunButton"));
         SunButton->setGeometry(QRect(120, 600, 141, 81));
+        SunButton->setFont(font1);
 
         verticalLayout_3->addWidget(groupBox_12);
 
@@ -219,10 +230,11 @@ public:
         scrollArea_4->setGeometry(QRect(10, 10, 391, 551));
         scrollArea_4->setMinimumSize(QSize(391, 551));
         scrollArea_4->setMaximumSize(QSize(391, 551));
+        scrollArea_4->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_6 = new QWidget();
         scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 372, 614));
+        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 379, 614));
         verticalLayout_5 = new QVBoxLayout(scrollAreaWidgetContents_6);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         label_10 = new QLabel(scrollAreaWidgetContents_6);
@@ -234,22 +246,26 @@ public:
 
         groupBox_2 = new QGroupBox(scrollAreaWidgetContents_6);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setMinimumSize(QSize(0, 550));
+        groupBox_2->setMinimumSize(QSize(361, 550));
+        groupBox_2->setMaximumSize(QSize(361, 16777215));
         BreakButton = new QPushButton(groupBox_2);
         BreakButton->setObjectName(QString::fromUtf8("BreakButton"));
         BreakButton->setGeometry(QRect(90, 20, 200, 150));
         BreakButton->setMinimumSize(QSize(200, 150));
         BreakButton->setMaximumSize(QSize(200, 150));
+        BreakButton->setFont(font1);
         LunButton = new QPushButton(groupBox_2);
         LunButton->setObjectName(QString::fromUtf8("LunButton"));
         LunButton->setGeometry(QRect(90, 190, 200, 150));
         LunButton->setMinimumSize(QSize(200, 150));
         LunButton->setMaximumSize(QSize(200, 150));
+        LunButton->setFont(font1);
         DinButton = new QPushButton(groupBox_2);
         DinButton->setObjectName(QString::fromUtf8("DinButton"));
         DinButton->setGeometry(QRect(90, 360, 200, 150));
         DinButton->setMinimumSize(QSize(200, 150));
         DinButton->setMaximumSize(QSize(200, 150));
+        DinButton->setFont(font1);
 
         verticalLayout_5->addWidget(groupBox_2);
 
@@ -266,10 +282,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
         scrollArea->setSizePolicy(sizePolicy);
+        scrollArea->setFont(font1);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 372, 1030));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 379, 1030));
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label_9 = new QLabel(scrollAreaWidgetContents);
@@ -284,16 +301,18 @@ public:
         FoodImage1->setObjectName(QString::fromUtf8("FoodImage1"));
         FoodImage1->setMinimumSize(QSize(201, 131));
         FoodImage1->setMaximumSize(QSize(201, 131));
+        FoodImage1->setFont(font1);
 
         verticalLayout->addWidget(FoodImage1);
 
         groupBox_3 = new QGroupBox(scrollAreaWidgetContents);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setMinimumSize(QSize(161, 100));
-        groupBox_3->setMaximumSize(QSize(1000, 1000));
+        groupBox_3->setMinimumSize(QSize(361, 100));
+        groupBox_3->setMaximumSize(QSize(361, 100));
         FoodLabel1 = new QLabel(groupBox_3);
         FoodLabel1->setObjectName(QString::fromUtf8("FoodLabel1"));
         FoodLabel1->setGeometry(QRect(10, 10, 211, 81));
+        FoodLabel1->setFont(font1);
 
         verticalLayout->addWidget(groupBox_3);
 
@@ -301,6 +320,7 @@ public:
         FoodImage2->setObjectName(QString::fromUtf8("FoodImage2"));
         FoodImage2->setMinimumSize(QSize(201, 131));
         FoodImage2->setMaximumSize(QSize(201, 131));
+        FoodImage2->setFont(font1);
 
         verticalLayout->addWidget(FoodImage2);
 
@@ -310,7 +330,10 @@ public:
         groupBox_4->setMaximumSize(QSize(1000, 1000));
         FoodLabel2 = new QLabel(groupBox_4);
         FoodLabel2->setObjectName(QString::fromUtf8("FoodLabel2"));
-        FoodLabel2->setGeometry(QRect(10, 10, 211, 81));
+        FoodLabel2->setGeometry(QRect(10, 10, 361, 100));
+        FoodLabel2->setMinimumSize(QSize(361, 100));
+        FoodLabel2->setMaximumSize(QSize(361, 100));
+        FoodLabel2->setFont(font1);
 
         verticalLayout->addWidget(groupBox_4);
 
@@ -323,8 +346,8 @@ public:
 
         groupBox_5 = new QGroupBox(scrollAreaWidgetContents);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setMinimumSize(QSize(161, 100));
-        groupBox_5->setMaximumSize(QSize(1000, 1000));
+        groupBox_5->setMinimumSize(QSize(361, 100));
+        groupBox_5->setMaximumSize(QSize(361, 100));
         FoodLabel3 = new QLabel(groupBox_5);
         FoodLabel3->setObjectName(QString::fromUtf8("FoodLabel3"));
         FoodLabel3->setGeometry(QRect(10, 10, 211, 81));
@@ -340,8 +363,8 @@ public:
 
         groupBox_6 = new QGroupBox(scrollAreaWidgetContents);
         groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
-        groupBox_6->setMinimumSize(QSize(161, 100));
-        groupBox_6->setMaximumSize(QSize(1000, 1000));
+        groupBox_6->setMinimumSize(QSize(361, 100));
+        groupBox_6->setMaximumSize(QSize(361, 100));
         FoodLabel4 = new QLabel(groupBox_6);
         FoodLabel4->setObjectName(QString::fromUtf8("FoodLabel4"));
         FoodLabel4->setGeometry(QRect(10, 10, 211, 81));
@@ -373,11 +396,11 @@ public:
 
         groupBox_13 = new QGroupBox(scrollAreaWidgetContents_5);
         groupBox_13->setObjectName(QString::fromUtf8("groupBox_13"));
+        groupBox_13->setMinimumSize(QSize(371, 0));
+        groupBox_13->setMaximumSize(QSize(371, 16777215));
         label_5 = new QLabel(groupBox_13);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(10, 130, 60, 40));
-        QFont font1;
-        font1.setPointSize(12);
         label_5->setFont(font1);
         lineEdit = new QLineEdit(groupBox_13);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
@@ -418,6 +441,77 @@ public:
 
         scrollArea_3->setWidget(scrollAreaWidgetContents_5);
         tabWidget->addTab(tab_5, QString());
+        tab_6 = new QWidget();
+        tab_6->setObjectName(QString::fromUtf8("tab_6"));
+        scrollArea_6 = new QScrollArea(tab_6);
+        scrollArea_6->setObjectName(QString::fromUtf8("scrollArea_6"));
+        scrollArea_6->setGeometry(QRect(10, 10, 391, 551));
+        scrollArea_6->setMinimumSize(QSize(391, 551));
+        scrollArea_6->setWidgetResizable(true);
+        scrollAreaWidgetContents_8 = new QWidget();
+        scrollAreaWidgetContents_8->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_8"));
+        scrollAreaWidgetContents_8->setGeometry(QRect(0, 0, 389, 549));
+        verticalLayout_7 = new QVBoxLayout(scrollAreaWidgetContents_8);
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        label_12 = new QLabel(scrollAreaWidgetContents_8);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setMinimumSize(QSize(0, 40));
+        label_12->setMaximumSize(QSize(16777215, 40));
+        label_12->setFont(font);
+
+        verticalLayout_7->addWidget(label_12);
+
+        groupBox_16 = new QGroupBox(scrollAreaWidgetContents_8);
+        groupBox_16->setObjectName(QString::fromUtf8("groupBox_16"));
+        groupBox_16->setMinimumSize(QSize(371, 395));
+        groupBox_16->setMaximumSize(QSize(371, 525));
+        label_20 = new QLabel(groupBox_16);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        label_20->setGeometry(QRect(10, 10, 111, 40));
+        label_20->setFont(font1);
+        label_25 = new QLabel(groupBox_16);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(150, 10, 190, 40));
+        label_25->setFont(font1);
+        label_25->setWordWrap(true);
+        label_21 = new QLabel(groupBox_16);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setGeometry(QRect(10, 220, 131, 40));
+        label_21->setFont(font1);
+        label_24 = new QLabel(groupBox_16);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(10, 50, 201, 131));
+        label_24->setMinimumSize(QSize(201, 131));
+        label_24->setMaximumSize(QSize(201, 131));
+        label_26 = new QLabel(groupBox_16);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(150, 220, 151, 40));
+        label_26->setFont(font1);
+        label_22 = new QLabel(groupBox_16);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setGeometry(QRect(10, 260, 131, 40));
+        label_22->setFont(font1);
+        label_27 = new QLabel(groupBox_16);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+        label_27->setGeometry(QRect(150, 260, 190, 40));
+        label_27->setFont(font1);
+        label_23 = new QLabel(groupBox_16);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setGeometry(QRect(10, 180, 111, 40));
+        label_23->setFont(font1);
+        label_28 = new QLabel(groupBox_16);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setGeometry(QRect(150, 180, 151, 40));
+        label_28->setFont(font1);
+        pushButton = new QPushButton(groupBox_16);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(150, 330, 161, 51));
+        pushButton->setFont(font1);
+
+        verticalLayout_7->addWidget(groupBox_16);
+
+        scrollArea_6->setWidget(scrollAreaWidgetContents_8);
+        tabWidget->addTab(tab_6, QString());
         tab_7 = new QWidget();
         tab_7->setObjectName(QString::fromUtf8("tab_7"));
         scrollArea_5 = new QScrollArea(tab_7);
@@ -425,10 +519,11 @@ public:
         scrollArea_5->setGeometry(QRect(10, 10, 391, 551));
         scrollArea_5->setMinimumSize(QSize(391, 551));
         scrollArea_5->setMaximumSize(QSize(391, 551));
+        scrollArea_5->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_5->setWidgetResizable(true);
         scrollAreaWidgetContents_7 = new QWidget();
         scrollAreaWidgetContents_7->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_7"));
-        scrollAreaWidgetContents_7->setGeometry(QRect(0, 0, 409, 796));
+        scrollAreaWidgetContents_7->setGeometry(QRect(0, 0, 379, 847));
         verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_7);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         label_11 = new QLabel(scrollAreaWidgetContents_7);
@@ -439,8 +534,8 @@ public:
 
         groupBox = new QGroupBox(scrollAreaWidgetContents_7);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setMinimumSize(QSize(365, 200));
-        groupBox->setMaximumSize(QSize(365, 200));
+        groupBox->setMinimumSize(QSize(361, 200));
+        groupBox->setMaximumSize(QSize(361, 200));
         groupBox->setFont(font1);
         radioButton = new QRadioButton(groupBox);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
@@ -468,7 +563,7 @@ public:
         groupBox_14 = new QGroupBox(scrollAreaWidgetContents_7);
         groupBox_14->setObjectName(QString::fromUtf8("groupBox_14"));
         groupBox_14->setMinimumSize(QSize(0, 200));
-        groupBox_14->setMaximumSize(QSize(365, 200));
+        groupBox_14->setMaximumSize(QSize(361, 200));
         label = new QLabel(groupBox_14);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 30, 131, 40));
@@ -499,8 +594,8 @@ public:
 
         groupBox_15 = new QGroupBox(scrollAreaWidgetContents_7);
         groupBox_15->setObjectName(QString::fromUtf8("groupBox_15"));
-        groupBox_15->setMinimumSize(QSize(365, 320));
-        groupBox_15->setMaximumSize(QSize(365, 320));
+        groupBox_15->setMinimumSize(QSize(361, 320));
+        groupBox_15->setMaximumSize(QSize(361, 320));
         label_15 = new QLabel(groupBox_15);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(10, 20, 131, 40));
@@ -594,78 +689,16 @@ public:
 
         verticalLayout_6->addWidget(groupBox_15);
 
+        pushButton_8 = new QPushButton(scrollAreaWidgetContents_7);
+        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
+        pushButton_8->setMinimumSize(QSize(0, 45));
+        pushButton_8->setMaximumSize(QSize(361, 45));
+        pushButton_8->setFont(font1);
+
+        verticalLayout_6->addWidget(pushButton_8);
+
         scrollArea_5->setWidget(scrollAreaWidgetContents_7);
         tabWidget->addTab(tab_7, QString());
-        tab_6 = new QWidget();
-        tab_6->setObjectName(QString::fromUtf8("tab_6"));
-        scrollArea_6 = new QScrollArea(tab_6);
-        scrollArea_6->setObjectName(QString::fromUtf8("scrollArea_6"));
-        scrollArea_6->setGeometry(QRect(10, 10, 391, 551));
-        scrollArea_6->setMinimumSize(QSize(391, 551));
-        scrollArea_6->setWidgetResizable(true);
-        scrollAreaWidgetContents_8 = new QWidget();
-        scrollAreaWidgetContents_8->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_8"));
-        scrollAreaWidgetContents_8->setGeometry(QRect(0, 0, 389, 549));
-        verticalLayout_7 = new QVBoxLayout(scrollAreaWidgetContents_8);
-        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
-        label_12 = new QLabel(scrollAreaWidgetContents_8);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setMinimumSize(QSize(0, 40));
-        label_12->setMaximumSize(QSize(16777215, 40));
-        label_12->setFont(font);
-
-        verticalLayout_7->addWidget(label_12);
-
-        groupBox_16 = new QGroupBox(scrollAreaWidgetContents_8);
-        groupBox_16->setObjectName(QString::fromUtf8("groupBox_16"));
-        groupBox_16->setMinimumSize(QSize(371, 395));
-        groupBox_16->setMaximumSize(QSize(371, 525));
-        label_20 = new QLabel(groupBox_16);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setGeometry(QRect(10, 10, 111, 40));
-        label_20->setFont(font1);
-        label_25 = new QLabel(groupBox_16);
-        label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setGeometry(QRect(150, 10, 190, 40));
-        label_25->setFont(font1);
-        label_25->setWordWrap(true);
-        label_21 = new QLabel(groupBox_16);
-        label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(10, 220, 131, 40));
-        label_21->setFont(font1);
-        label_24 = new QLabel(groupBox_16);
-        label_24->setObjectName(QString::fromUtf8("label_24"));
-        label_24->setGeometry(QRect(10, 50, 201, 131));
-        label_24->setMinimumSize(QSize(201, 131));
-        label_24->setMaximumSize(QSize(201, 131));
-        label_26 = new QLabel(groupBox_16);
-        label_26->setObjectName(QString::fromUtf8("label_26"));
-        label_26->setGeometry(QRect(150, 220, 151, 40));
-        label_26->setFont(font1);
-        label_22 = new QLabel(groupBox_16);
-        label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setGeometry(QRect(10, 260, 131, 40));
-        label_22->setFont(font1);
-        label_27 = new QLabel(groupBox_16);
-        label_27->setObjectName(QString::fromUtf8("label_27"));
-        label_27->setGeometry(QRect(150, 260, 190, 40));
-        label_27->setFont(font1);
-        label_23 = new QLabel(groupBox_16);
-        label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setGeometry(QRect(10, 180, 111, 40));
-        label_23->setFont(font1);
-        label_28 = new QLabel(groupBox_16);
-        label_28->setObjectName(QString::fromUtf8("label_28"));
-        label_28->setGeometry(QRect(150, 180, 151, 40));
-        label_28->setFont(font1);
-        pushButton = new QPushButton(groupBox_16);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(150, 330, 161, 51));
-
-        verticalLayout_7->addWidget(groupBox_16);
-
-        scrollArea_6->setWidget(scrollAreaWidgetContents_8);
-        tabWidget->addTab(tab_6, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
         scrollArea_7 = new QScrollArea(tab_4);
@@ -732,7 +765,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -785,6 +818,19 @@ public:
         lineEdit_3->setText(QString());
         label_8->setText(QCoreApplication::translate("MainWindow", "Delivery Time:", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "Delivery", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Confirmation</p></body></html>", nullptr));
+        groupBox_16->setTitle(QString());
+        label_20->setText(QCoreApplication::translate("MainWindow", "Food Choice:", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "Ex: Octopus", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "Delivery Address:", nullptr));
+        label_24->setText(QCoreApplication::translate("MainWindow", "Image of Food Here", nullptr));
+        label_26->setText(QCoreApplication::translate("MainWindow", "98119 hill", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "Credit Card Info:", nullptr));
+        label_27->setText(QCoreApplication::translate("MainWindow", "****-****-****-4587", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "Name:", nullptr));
+        label_28->setText(QCoreApplication::translate("MainWindow", "Liam Not Levi", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Leave Us a Rating", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Confirmation", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Payment</p></body></html>", nullptr));
         groupBox->setTitle(QString());
         radioButton->setText(QCoreApplication::translate("MainWindow", "Visa", nullptr));
@@ -854,20 +900,8 @@ public:
         comboBox_3->setItemText(48, QCoreApplication::translate("MainWindow", "Wyoming", nullptr));
 
         label_18->setText(QCoreApplication::translate("MainWindow", "Zip Code:", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Complete Payment", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_7), QCoreApplication::translate("MainWindow", "Payment", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Confirmation</p></body></html>", nullptr));
-        groupBox_16->setTitle(QString());
-        label_20->setText(QCoreApplication::translate("MainWindow", "Food Choice:", nullptr));
-        label_25->setText(QCoreApplication::translate("MainWindow", "Ex: Octopus", nullptr));
-        label_21->setText(QCoreApplication::translate("MainWindow", "Delivery Address:", nullptr));
-        label_24->setText(QCoreApplication::translate("MainWindow", "Image of Food Here", nullptr));
-        label_26->setText(QCoreApplication::translate("MainWindow", "98119 hill", nullptr));
-        label_22->setText(QCoreApplication::translate("MainWindow", "Credit Card Info:", nullptr));
-        label_27->setText(QCoreApplication::translate("MainWindow", "****-****-****-4587", nullptr));
-        label_23->setText(QCoreApplication::translate("MainWindow", "Name:", nullptr));
-        label_28->setText(QCoreApplication::translate("MainWindow", "Liam Not Levi", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Leave Us a Rating", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Confirmation", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Rating</p></body></html>", nullptr));
         groupBox_17->setTitle(QString());
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Upload Image of Food:", nullptr));
