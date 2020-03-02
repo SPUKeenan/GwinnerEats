@@ -10,12 +10,14 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
@@ -31,6 +33,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionExit;
     QWidget *centralwidget;
     QTabWidget *tabWidget;
     QWidget *tab;
@@ -86,6 +89,7 @@ public:
     QLineEdit *RoomLine;
     QLabel *label_8;
     QTimeEdit *DelivTime;
+    QPushButton *PayButton;
     QWidget *tab_7;
     QScrollArea *scrollArea_5;
     QWidget *scrollAreaWidgetContents_7;
@@ -151,6 +155,7 @@ public:
     QPushButton *Star4;
     QPushButton *Star5;
     QMenuBar *menubar;
+    QMenu *menuFile;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -161,6 +166,8 @@ public:
         MainWindow->setMinimumSize(QSize(391, 551));
         MainWindow->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 0);"));
+        actionExit = new QAction(MainWindow);
+        actionExit->setObjectName(QString::fromUtf8("actionExit"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
@@ -191,7 +198,7 @@ public:
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, -126, 389, 814));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 389, 814));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents_4);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         WelcomLabel = new QLabel(scrollAreaWidgetContents_4);
@@ -213,7 +220,7 @@ public:
 "background-color: rgb(48, 48, 48);"));
         MonButton = new QPushButton(groupBox_12);
         MonButton->setObjectName(QString::fromUtf8("MonButton"));
-        MonButton->setGeometry(QRect(120, 20, 141, 81));
+        MonButton->setGeometry(QRect(120, 40, 141, 81));
         QFont font1;
         font1.setPointSize(12);
         font1.setBold(true);
@@ -222,32 +229,32 @@ public:
         MonButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         TuesButton = new QPushButton(groupBox_12);
         TuesButton->setObjectName(QString::fromUtf8("TuesButton"));
-        TuesButton->setGeometry(QRect(120, 110, 141, 81));
+        TuesButton->setGeometry(QRect(120, 130, 141, 81));
         TuesButton->setFont(font1);
         TuesButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         WedButton = new QPushButton(groupBox_12);
         WedButton->setObjectName(QString::fromUtf8("WedButton"));
-        WedButton->setGeometry(QRect(120, 200, 141, 81));
+        WedButton->setGeometry(QRect(120, 220, 141, 81));
         WedButton->setFont(font1);
         WedButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         ThurButton = new QPushButton(groupBox_12);
         ThurButton->setObjectName(QString::fromUtf8("ThurButton"));
-        ThurButton->setGeometry(QRect(120, 290, 141, 81));
+        ThurButton->setGeometry(QRect(120, 310, 141, 81));
         ThurButton->setFont(font1);
         ThurButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         FriButton = new QPushButton(groupBox_12);
         FriButton->setObjectName(QString::fromUtf8("FriButton"));
-        FriButton->setGeometry(QRect(120, 380, 141, 81));
+        FriButton->setGeometry(QRect(120, 400, 141, 81));
         FriButton->setFont(font1);
         FriButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         SatButton = new QPushButton(groupBox_12);
         SatButton->setObjectName(QString::fromUtf8("SatButton"));
-        SatButton->setGeometry(QRect(120, 470, 141, 81));
+        SatButton->setGeometry(QRect(120, 490, 141, 81));
         SatButton->setFont(font1);
         SatButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         SunButton = new QPushButton(groupBox_12);
         SunButton->setObjectName(QString::fromUtf8("SunButton"));
-        SunButton->setGeometry(QRect(120, 560, 141, 81));
+        SunButton->setGeometry(QRect(120, 580, 141, 81));
         SunButton->setFont(font1);
         SunButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
@@ -267,7 +274,7 @@ public:
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_6 = new QWidget();
         scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 379, 614));
+        scrollAreaWidgetContents_6->setGeometry(QRect(0, -65, 379, 614));
         verticalLayout_5 = new QVBoxLayout(scrollAreaWidgetContents_6);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         label_10 = new QLabel(scrollAreaWidgetContents_6);
@@ -488,6 +495,7 @@ public:
         RoomLine->setGeometry(QRect(100, 250, 80, 40));
         RoomLine->setFont(font3);
         RoomLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        RoomLine->setMaxLength(3);
         RoomLine->setFrame(false);
         label_8 = new QLabel(groupBox_13);
         label_8->setObjectName(QString::fromUtf8("label_8"));
@@ -501,6 +509,11 @@ public:
         DelivTime->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
 ""));
         DelivTime->setFrame(false);
+        PayButton = new QPushButton(groupBox_13);
+        PayButton->setObjectName(QString::fromUtf8("PayButton"));
+        PayButton->setGeometry(QRect(220, 420, 140, 50));
+        PayButton->setFont(font1);
+        PayButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
         verticalLayout_4->addWidget(groupBox_13);
 
@@ -519,7 +532,7 @@ public:
         scrollArea_5->setWidgetResizable(true);
         scrollAreaWidgetContents_7 = new QWidget();
         scrollAreaWidgetContents_7->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_7"));
-        scrollAreaWidgetContents_7->setGeometry(QRect(0, -396, 379, 947));
+        scrollAreaWidgetContents_7->setGeometry(QRect(0, 0, 379, 947));
         verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_7);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         label_11 = new QLabel(scrollAreaWidgetContents_7);
@@ -584,6 +597,7 @@ public:
         CVCLine->setGeometry(QRect(130, 90, 71, 40));
         CVCLine->setFont(font3);
         CVCLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        CVCLine->setMaxLength(3);
         label_3 = new QLabel(groupBox_14);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(10, 150, 131, 40));
@@ -603,6 +617,7 @@ public:
         IDNumLine->setGeometry(QRect(130, 210, 230, 40));
         IDNumLine->setFont(font3);
         IDNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        IDNumLine->setMaxLength(9);
 
         verticalLayout_6->addWidget(groupBox_14);
 
@@ -927,14 +942,29 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 422, 22));
+        menubar->setStyleSheet(QString::fromUtf8("QMenubar::tab:selected,\n"
+"QMenutab::tab:hover\n"
+"{\n"
+" border-top-color: #1D2A32;\n"
+"    border-color: #40494E;\n"
+"    color: black;\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #C1D8E8, stop: 1 #F0F5F8);\n"
+"}"));
+        menubar->setDefaultUp(false);
+        menuFile = new QMenu(menubar);
+        menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        menuFile->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
+        menubar->addAction(menuFile->menuAction());
+        menuFile->addAction(actionExit);
+
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(6);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -943,6 +973,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         WelcomLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Welcome To </p><p align=\"center\">GwinnerEats</p></body></html>", nullptr));
         groupBox_12->setTitle(QString());
         MonButton->setText(QCoreApplication::translate("MainWindow", "Monday", nullptr));
@@ -976,6 +1007,7 @@ public:
         label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Delivery Information</p></body></html>", nullptr));
         groupBox_13->setTitle(QString());
         label_5->setText(QCoreApplication::translate("MainWindow", "Name:", nullptr));
+        NameLabel->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mark Smith", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Dorm:", nullptr));
         HallCombo->setItemText(0, QCoreApplication::translate("MainWindow", "Hill Hall", nullptr));
         HallCombo->setItemText(1, QCoreApplication::translate("MainWindow", "Ashton Hall", nullptr));
@@ -984,8 +1016,11 @@ public:
         HallCombo->setItemText(4, QCoreApplication::translate("MainWindow", "Moyer Hall", nullptr));
 
         label_7->setText(QCoreApplication::translate("MainWindow", "Room #:", nullptr));
+        RoomLine->setInputMask(QString());
         RoomLine->setText(QString());
+        RoomLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "111", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Delivery Time:", nullptr));
+        PayButton->setText(QCoreApplication::translate("MainWindow", "Payment", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "Delivery", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Payment</p></body></html>", nullptr));
         groupBox->setTitle(QString());
@@ -998,13 +1033,23 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Credit Card Number:</p></body></html>", nullptr));
         CreditNumLine->setText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "CVC:", nullptr));
+        CVCLine->setInputMask(QString());
+        CVCLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "000", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Name on Card:", nullptr));
+        CardNameLine->setInputMask(QString());
+        CardNameLine->setText(QString());
+        CardNameLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mark Smith", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "ID # (only if Meal Swipe):", nullptr));
+        IDNumLine->setInputMask(QString());
+        IDNumLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "900123123", nullptr));
         groupBox_15->setTitle(QString());
         label_15->setText(QCoreApplication::translate("MainWindow", "Street Address:", nullptr));
         StreetLine->setText(QString());
+        StreetLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "123 N Garden St", nullptr));
         label_16->setText(QCoreApplication::translate("MainWindow", "Apartment #:", nullptr));
+        AptLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "2222", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
+        CityLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "Seattle", nullptr));
         label_19->setText(QCoreApplication::translate("MainWindow", "State:", nullptr));
         StateCombo->setItemText(0, QCoreApplication::translate("MainWindow", "Alabama", nullptr));
         StateCombo->setItemText(1, QCoreApplication::translate("MainWindow", "Alaska", nullptr));
@@ -1057,6 +1102,7 @@ public:
         StateCombo->setItemText(48, QCoreApplication::translate("MainWindow", "Wyoming", nullptr));
 
         label_18->setText(QCoreApplication::translate("MainWindow", "Zip Code:", nullptr));
+        ZipLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "98119", nullptr));
         CompButton->setText(QCoreApplication::translate("MainWindow", "Complete Payment", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_7), QCoreApplication::translate("MainWindow", "Payment", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Confirmation</p></body></html>", nullptr));
@@ -1085,6 +1131,7 @@ public:
         Star4->setText(QString());
         Star5->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Rating", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 
 };

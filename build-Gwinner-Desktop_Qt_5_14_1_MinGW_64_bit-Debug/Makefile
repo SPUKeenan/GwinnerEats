@@ -843,6 +843,9 @@ mainwindow.o: ../Gwinner/mainwindow.cpp ../Gwinner/mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QAction \
+		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -874,11 +877,10 @@ mainwindow.o: ../Gwinner/mainwindow.cpp ../Gwinner/mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qpen.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QMenuBar \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
