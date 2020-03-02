@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>453</width>
-    <height>667</height>
+    <width>422</width>
+    <height>666</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -19,18 +19,38 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>10</y>
-      <width>431</width>
+      <width>420</width>
       <height>611</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab
+{
+background: #212121;
+color: white;
+}
+QTabBar::tab:selected,
+QTabBar::tab:hover
+{
+ border-top-color: #1D2A32;
+    border-color: #40494E;
+    color: black;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #C1D8E8, stop: 1 #F0F5F8);
+}
+</string>
+    </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -51,6 +71,9 @@
         <height>551</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);</string>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -61,7 +84,7 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-265</y>
          <width>389</width>
          <height>814</height>
         </rect>
@@ -108,6 +131,10 @@
             <height>700</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">
+background-color: rgb(48, 48, 48);</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -115,7 +142,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>20</y>
+             <y>40</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -123,7 +150,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Monday</string>
@@ -133,7 +165,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>110</y>
+             <y>130</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -141,7 +173,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Tuesday</string>
@@ -151,7 +188,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>200</y>
+             <y>220</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -159,7 +196,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Wednesday</string>
@@ -169,7 +211,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>300</y>
+             <y>310</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -177,7 +219,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Thursday</string>
@@ -195,7 +242,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Friday</string>
@@ -205,7 +257,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>500</y>
+             <y>490</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -213,7 +265,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Saturday</string>
@@ -223,7 +280,7 @@
            <property name="geometry">
             <rect>
              <x>120</x>
-             <y>600</y>
+             <y>580</y>
              <width>141</width>
              <height>81</height>
             </rect>
@@ -231,7 +288,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Sunday</string>
@@ -268,6 +330,9 @@
         <height>551</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);</string>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -278,7 +343,7 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-65</y>
+         <y>0</y>
          <width>379</width>
          <height>614</height>
         </rect>
@@ -316,6 +381,10 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -342,8 +411,13 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Breakfast</string>
@@ -372,8 +446,13 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Lunch</string>
@@ -402,8 +481,13 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Dinner</string>
@@ -441,6 +525,10 @@
        <font>
         <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);
+border:0;</string>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -514,6 +602,10 @@
             <height>100</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -575,6 +667,10 @@
             <height>1000</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border:0;
+background-color: rgb(48, 48, 48);</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -583,20 +679,20 @@
             <rect>
              <x>10</x>
              <y>10</y>
-             <width>361</width>
-             <height>100</height>
+             <width>211</width>
+             <height>81</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
-             <width>361</width>
-             <height>100</height>
+             <width>211</width>
+             <height>81</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>361</width>
-             <height>100</height>
+             <width>211</width>
+             <height>81</height>
             </size>
            </property>
            <property name="font">
@@ -642,6 +738,10 @@
             <width>361</width>
             <height>100</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:0;
+background-color: rgb(48, 48, 48);</string>
           </property>
           <property name="title">
            <string/>
@@ -694,6 +794,10 @@
             <height>100</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border:0;
+background-color: rgb(48, 48, 48);</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -740,6 +844,9 @@
         <width>391</width>
         <height>551</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);</string>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -789,6 +896,10 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -824,6 +935,12 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
           </widget>
           <widget class="QLabel" name="label_6">
            <property name="geometry">
@@ -856,6 +973,9 @@
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <item>
             <property name="text">
@@ -915,8 +1035,14 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
            </property>
           </widget>
           <widget class="QLabel" name="label_8">
@@ -954,6 +1080,13 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);
+</string>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
           </widget>
          </widget>
         </item>
@@ -986,6 +1119,10 @@
         <height>551</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);
+border:0;</string>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -996,7 +1133,7 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-398</y>
+         <y>-396</y>
          <width>379</width>
          <height>947</height>
         </rect>
@@ -1033,6 +1170,10 @@
             <pointsize>12</pointsize>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -1049,6 +1190,9 @@
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Visa</string>
@@ -1142,6 +1286,10 @@
             <height>300</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
@@ -1180,6 +1328,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -1216,6 +1367,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
           </widget>
           <widget class="QLabel" name="label_3">
            <property name="geometry">
@@ -1248,6 +1402,9 @@
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_14">
@@ -1285,6 +1442,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
           </widget>
          </widget>
         </item>
@@ -1301,6 +1461,10 @@
             <width>361</width>
             <height>320</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
           </property>
           <property name="title">
            <string/>
@@ -1336,6 +1500,9 @@
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string/>
@@ -1376,6 +1543,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
           </widget>
           <widget class="QLabel" name="label_17">
            <property name="geometry">
@@ -1409,6 +1579,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
           </widget>
           <widget class="QLabel" name="label_19">
            <property name="geometry">
@@ -1441,6 +1614,9 @@
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <item>
             <property name="text">
@@ -1720,6 +1896,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
           </widget>
          </widget>
         </item>
@@ -1740,7 +1919,12 @@
           <property name="font">
            <font>
             <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(66, 66, 66);</string>
           </property>
           <property name="text">
            <string>Complete Payment</string>
@@ -1769,6 +1953,9 @@
         <width>391</width>
         <height>551</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);</string>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -1820,6 +2007,11 @@
             <width>371</width>
             <height>525</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+border:0;
+background-color: rgb(48, 48, 48);</string>
           </property>
           <property name="title">
            <string/>
@@ -2008,7 +2200,12 @@
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Leave Us a Rating</string>
@@ -2075,6 +2272,9 @@
         <height>551</height>
        </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 33, 33);</string>
+      </property>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
@@ -2114,22 +2314,30 @@
             <height>0</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">border:0;</string>
+          </property>
           <property name="title">
            <string/>
           </property>
           <widget class="QPushButton" name="UploadButton">
            <property name="geometry">
             <rect>
-             <x>90</x>
+             <x>80</x>
              <y>110</y>
-             <width>181</width>
+             <width>190</width>
              <height>41</height>
             </rect>
            </property>
            <property name="font">
             <font>
              <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
            <property name="text">
             <string>Upload Image of Food:</string>
@@ -2163,9 +2371,9 @@
           <widget class="QLabel" name="label_30">
            <property name="geometry">
             <rect>
-             <x>0</x>
+             <x>7</x>
              <y>20</y>
-             <width>51</width>
+             <width>60</width>
              <height>51</height>
             </rect>
            </property>
@@ -2187,8 +2395,22 @@
              <height>51</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Star1 {
+backgroud-color: transparent;
+border-image: url(:greyStar.jpeg);
+background: none;
+border: none;
+backgroud-repeat: none;
+}
+#Star1:pressed,
+#Star1:checked
+{
+border-image: url(:yelloStar.png);
+}</string>
+           </property>
            <property name="text">
-            <string>Star 1</string>
+            <string/>
            </property>
           </widget>
           <widget class="QPushButton" name="Star2">
@@ -2200,8 +2422,22 @@
              <height>51</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Star2 {
+backgroud-color: transparent;
+border-image: url(:greyStar.jpeg);
+background: none;
+border: none;
+backgroud-repeat: none;
+}
+#Star2:pressed,
+#Star2:checked
+{
+border-image: url(:yelloStar.png);
+}</string>
+           </property>
            <property name="text">
-            <string>Star 2</string>
+            <string/>
            </property>
           </widget>
           <widget class="QPushButton" name="Star3">
@@ -2213,8 +2449,22 @@
              <height>51</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Star3 {
+backgroud-color: transparent;
+border-image: url(:greyStar.jpeg);
+background: none;
+border: none;
+backgroud-repeat: none;
+}
+#Star3:pressed,
+#Star3:checked
+{
+border-image: url(:yelloStar.png);
+}</string>
+           </property>
            <property name="text">
-            <string>Star 3</string>
+            <string/>
            </property>
           </widget>
           <widget class="QPushButton" name="Star4">
@@ -2226,8 +2476,22 @@
              <height>51</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Star4 {
+backgroud-color: transparent;
+border-image: url(:greyStar.jpeg);
+background: none;
+border: none;
+backgroud-repeat: none;
+}
+#Star4:pressed,
+#Star4:checked
+{
+border-image: url(:yelloStar.png);
+}</string>
+           </property>
            <property name="text">
-            <string>Star 4</string>
+            <string/>
            </property>
           </widget>
           <widget class="QPushButton" name="Star5">
@@ -2239,8 +2503,22 @@
              <height>51</height>
             </rect>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Star5 {
+backgroud-color: transparent;
+border-image: url(:greyStar.jpeg);
+background: none;
+border: none;
+backgroud-repeat: none;
+}
+#Star5:pressed,
+#Star5:checked
+{
+border-image: url(:yelloStar.png);
+}</string>
+           </property>
            <property name="text">
-            <string>Star 5</string>
+            <string/>
            </property>
           </widget>
          </widget>
@@ -2256,7 +2534,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>453</width>
+     <width>422</width>
      <height>22</height>
     </rect>
    </property>
