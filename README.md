@@ -15,7 +15,8 @@ Order Date and meal selection Tab - 2 Pages (1, 2, 4) (Bosena)
 
 Using a JSON file for output
 All file information is outputted on "Complete Payment" button click
-Name of client
+
+-Name of client
   - Address
     - Hall
     - Room
