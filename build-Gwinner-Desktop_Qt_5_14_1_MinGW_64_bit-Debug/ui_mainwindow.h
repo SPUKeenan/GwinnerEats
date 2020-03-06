@@ -75,10 +75,10 @@ public:
     QPushButton *FoodImage4;
     QGroupBox *groupBox_6;
     QLabel *FoodLabel4;
-    QWidget *tab_5;
-    QScrollArea *scrollArea_3;
-    QWidget *scrollAreaWidgetContents_5;
-    QVBoxLayout *verticalLayout_4;
+    QWidget *tab_7;
+    QScrollArea *scrollArea_5;
+    QWidget *scrollAreaWidgetContents_7;
+    QVBoxLayout *verticalLayout_6;
     QLabel *label_4;
     QGroupBox *groupBox_13;
     QLabel *label_5;
@@ -89,11 +89,10 @@ public:
     QLineEdit *RoomLine;
     QLabel *label_8;
     QTimeEdit *DelivTime;
-    QPushButton *PayButton;
-    QWidget *tab_7;
-    QScrollArea *scrollArea_5;
-    QWidget *scrollAreaWidgetContents_7;
-    QVBoxLayout *verticalLayout_6;
+    QLabel *Noteslabel;
+    QLineEdit *DelivNotes;
+    QLabel *PhoneLabel;
+    QLineEdit *PhoneInpute;
     QLabel *label_11;
     QGroupBox *groupBox;
     QRadioButton *VisaRadio;
@@ -140,6 +139,8 @@ public:
     QPushButton *RateButton;
     QLabel *label_31;
     QLabel *IDLabel;
+    QLabel *label_24;
+    QLabel *PhoneOut;
     QWidget *tab_4;
     QScrollArea *scrollArea_7;
     QWidget *scrollAreaWidgetContents_9;
@@ -154,6 +155,8 @@ public:
     QPushButton *Star3;
     QPushButton *Star4;
     QPushButton *Star5;
+    QLabel *CommentLabel;
+    QLineEdit *CommentInput;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -162,7 +165,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(407, 631);
+        MainWindow->resize(396, 653);
         MainWindow->setMinimumSize(QSize(391, 551));
         QFont font;
         font.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
@@ -171,23 +174,25 @@ public:
 "background-color: rgb(0, 0, 0);"));
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Candara"));
-        actionExit->setFont(font1);
+        actionExit->setFont(font);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setFont(font);
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 411, 591));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font2.setPointSize(9);
-        tabWidget->setFont(font2);
+        tabWidget->setGeometry(QRect(0, 0, 391, 591));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font1.setPointSize(8);
+        tabWidget->setFont(font1);
         tabWidget->setMouseTracking(false);
-        tabWidget->setStyleSheet(QString::fromUtf8("QTabBar::tab\n"
+        tabWidget->setLayoutDirection(Qt::LeftToRight);
+        tabWidget->setAutoFillBackground(false);
+        tabWidget->setStyleSheet(QString::fromUtf8("QTabBar::tab { height: 30px; width: 65px; }\n"
+"QTabBar::tab\n"
 "{\n"
 "background: #212121;\n"
+"border-color: rgb(48, 48, 48);\n"
 "}\n"
 "QTabBar::tab:selected,\n"
 "QTabBar::tab:hover\n"
@@ -199,14 +204,19 @@ public:
 "}\n"
 ""));
         tabWidget->setTabPosition(QTabWidget::South);
+        tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setIconSize(QSize(16, 16));
+        tabWidget->setUsesScrollButtons(false);
         tabWidget->setDocumentMode(true);
         tabWidget->setTabsClosable(false);
         tabWidget->setMovable(false);
         tabWidget->setTabBarAutoHide(true);
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
-        tab->setFont(font1);
+        tab->setMinimumSize(QSize(391, 0));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Candara"));
+        tab->setFont(font2);
         tab->setStyleSheet(QString::fromUtf8(""));
         scrollArea_2 = new QScrollArea(tab);
         scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
@@ -214,11 +224,12 @@ public:
         scrollArea_2->setMinimumSize(QSize(391, 551));
         scrollArea_2->setStyleSheet(QString::fromUtf8("border:0;\n"
 "background-color: rgb(33, 33, 33);"));
+        scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 389, 814));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 391, 814));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents_4);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         WelcomLabel = new QLabel(scrollAreaWidgetContents_4);
@@ -227,7 +238,7 @@ public:
         WelcomLabel->setMaximumSize(QSize(371, 90));
         QFont font3;
         font3.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font3.setPointSize(24);
+        font3.setPointSize(23);
         WelcomLabel->setFont(font3);
         WelcomLabel->setAlignment(Qt::AlignCenter);
 
@@ -241,42 +252,43 @@ public:
 "background-color: rgb(48, 48, 48);"));
         MonButton = new QPushButton(groupBox_12);
         MonButton->setObjectName(QString::fromUtf8("MonButton"));
-        MonButton->setGeometry(QRect(120, 40, 141, 81));
+        MonButton->setGeometry(QRect(110, 40, 141, 81));
         QFont font4;
         font4.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
         font4.setPointSize(14);
         font4.setBold(true);
         font4.setWeight(75);
         MonButton->setFont(font4);
-        MonButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        MonButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
+"selection-color: rgb(190, 190, 190);"));
         TuesButton = new QPushButton(groupBox_12);
         TuesButton->setObjectName(QString::fromUtf8("TuesButton"));
-        TuesButton->setGeometry(QRect(120, 130, 141, 81));
+        TuesButton->setGeometry(QRect(110, 130, 141, 81));
         TuesButton->setFont(font4);
         TuesButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         WedButton = new QPushButton(groupBox_12);
         WedButton->setObjectName(QString::fromUtf8("WedButton"));
-        WedButton->setGeometry(QRect(120, 220, 141, 81));
+        WedButton->setGeometry(QRect(110, 220, 141, 81));
         WedButton->setFont(font4);
         WedButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         ThurButton = new QPushButton(groupBox_12);
         ThurButton->setObjectName(QString::fromUtf8("ThurButton"));
-        ThurButton->setGeometry(QRect(120, 310, 141, 81));
+        ThurButton->setGeometry(QRect(110, 310, 141, 81));
         ThurButton->setFont(font4);
         ThurButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         FriButton = new QPushButton(groupBox_12);
         FriButton->setObjectName(QString::fromUtf8("FriButton"));
-        FriButton->setGeometry(QRect(120, 400, 141, 81));
+        FriButton->setGeometry(QRect(110, 400, 141, 81));
         FriButton->setFont(font4);
         FriButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         SatButton = new QPushButton(groupBox_12);
         SatButton->setObjectName(QString::fromUtf8("SatButton"));
-        SatButton->setGeometry(QRect(120, 490, 141, 81));
+        SatButton->setGeometry(QRect(110, 490, 141, 81));
         SatButton->setFont(font4);
         SatButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         SunButton = new QPushButton(groupBox_12);
         SunButton->setObjectName(QString::fromUtf8("SunButton"));
-        SunButton->setGeometry(QRect(120, 580, 141, 81));
+        SunButton->setGeometry(QRect(110, 580, 141, 81));
         SunButton->setFont(font4);
         SunButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
@@ -293,11 +305,12 @@ public:
         scrollArea_4->setMaximumSize(QSize(391, 551));
         scrollArea_4->setStyleSheet(QString::fromUtf8("border:0;\n"
 "background-color: rgb(33, 33, 33);"));
+        scrollArea_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_4->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_6 = new QWidget();
         scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 379, 614));
+        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 391, 551));
         verticalLayout_5 = new QVBoxLayout(scrollAreaWidgetContents_6);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         label_10 = new QLabel(scrollAreaWidgetContents_6);
@@ -312,15 +325,15 @@ public:
 
         groupBox_2 = new QGroupBox(scrollAreaWidgetContents_6);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setMinimumSize(QSize(361, 550));
-        groupBox_2->setMaximumSize(QSize(361, 16777215));
+        groupBox_2->setMinimumSize(QSize(361, 450));
+        groupBox_2->setMaximumSize(QSize(361, 450));
         groupBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
 "border:0;"));
         BreakButton = new QPushButton(groupBox_2);
         BreakButton->setObjectName(QString::fromUtf8("BreakButton"));
-        BreakButton->setGeometry(QRect(90, 20, 200, 150));
-        BreakButton->setMinimumSize(QSize(200, 150));
-        BreakButton->setMaximumSize(QSize(200, 150));
+        BreakButton->setGeometry(QRect(110, 50, 141, 81));
+        BreakButton->setMinimumSize(QSize(141, 81));
+        BreakButton->setMaximumSize(QSize(141, 81));
         QFont font6;
         font6.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
         font6.setPointSize(15);
@@ -330,16 +343,16 @@ public:
         BreakButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         LunButton = new QPushButton(groupBox_2);
         LunButton->setObjectName(QString::fromUtf8("LunButton"));
-        LunButton->setGeometry(QRect(90, 190, 200, 150));
-        LunButton->setMinimumSize(QSize(200, 150));
-        LunButton->setMaximumSize(QSize(200, 150));
+        LunButton->setGeometry(QRect(110, 180, 141, 81));
+        LunButton->setMinimumSize(QSize(141, 81));
+        LunButton->setMaximumSize(QSize(141, 81));
         LunButton->setFont(font6);
         LunButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         DinButton = new QPushButton(groupBox_2);
         DinButton->setObjectName(QString::fromUtf8("DinButton"));
-        DinButton->setGeometry(QRect(90, 360, 200, 150));
-        DinButton->setMinimumSize(QSize(200, 150));
-        DinButton->setMaximumSize(QSize(200, 150));
+        DinButton->setGeometry(QRect(110, 310, 141, 81));
+        DinButton->setMinimumSize(QSize(141, 81));
+        DinButton->setMaximumSize(QSize(141, 81));
         DinButton->setFont(font6);
         DinButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
@@ -363,11 +376,12 @@ public:
         scrollArea->setFont(font7);
         scrollArea->setStyleSheet(QString::fromUtf8("background-color: rgb(33, 33, 33);\n"
 "border:0;"));
+        scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -479, 379, 1030));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 391, 1030));
         verticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label_9 = new QLabel(scrollAreaWidgetContents);
@@ -469,97 +483,6 @@ public:
 
         scrollArea->setWidget(scrollAreaWidgetContents);
         tabWidget->addTab(tab_3, QString());
-        tab_5 = new QWidget();
-        tab_5->setObjectName(QString::fromUtf8("tab_5"));
-        scrollArea_3 = new QScrollArea(tab_5);
-        scrollArea_3->setObjectName(QString::fromUtf8("scrollArea_3"));
-        scrollArea_3->setGeometry(QRect(10, 10, 391, 551));
-        scrollArea_3->setStyleSheet(QString::fromUtf8("border:0;\n"
-"background-color: rgb(33, 33, 33);"));
-        scrollArea_3->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        scrollArea_3->setWidgetResizable(true);
-        scrollAreaWidgetContents_5 = new QWidget();
-        scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 391, 551));
-        verticalLayout_4 = new QVBoxLayout(scrollAreaWidgetContents_5);
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        label_4 = new QLabel(scrollAreaWidgetContents_5);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setMaximumSize(QSize(16777215, 40));
-        label_4->setFont(font5);
-        label_4->setWordWrap(true);
-
-        verticalLayout_4->addWidget(label_4);
-
-        groupBox_13 = new QGroupBox(scrollAreaWidgetContents_5);
-        groupBox_13->setObjectName(QString::fromUtf8("groupBox_13"));
-        groupBox_13->setMinimumSize(QSize(371, 0));
-        groupBox_13->setMaximumSize(QSize(371, 16777215));
-        groupBox_13->setFont(font1);
-        groupBox_13->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
-"border:0;"));
-        label_5 = new QLabel(groupBox_13);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(10, 130, 60, 40));
-        label_5->setFont(font8);
-        NameLabel = new QLineEdit(groupBox_13);
-        NameLabel->setObjectName(QString::fromUtf8("NameLabel"));
-        NameLabel->setGeometry(QRect(110, 130, 261, 40));
-        NameLabel->setFont(font8);
-        NameLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        NameLabel->setFrame(false);
-        label_6 = new QLabel(groupBox_13);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(10, 200, 71, 40));
-        label_6->setFont(font8);
-        HallCombo = new QComboBox(groupBox_13);
-        HallCombo->addItem(QString());
-        HallCombo->addItem(QString());
-        HallCombo->addItem(QString());
-        HallCombo->addItem(QString());
-        HallCombo->addItem(QString());
-        HallCombo->setObjectName(QString::fromUtf8("HallCombo"));
-        HallCombo->setGeometry(QRect(110, 200, 161, 40));
-        HallCombo->setFont(font8);
-        HallCombo->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        label_7 = new QLabel(groupBox_13);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(10, 250, 101, 40));
-        label_7->setFont(font8);
-        RoomLine = new QLineEdit(groupBox_13);
-        RoomLine->setObjectName(QString::fromUtf8("RoomLine"));
-        RoomLine->setGeometry(QRect(110, 250, 80, 40));
-        RoomLine->setFont(font8);
-        RoomLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        RoomLine->setMaxLength(3);
-        RoomLine->setFrame(false);
-        label_8 = new QLabel(groupBox_13);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(10, 360, 101, 40));
-        label_8->setFont(font8);
-        label_8->setWordWrap(true);
-        DelivTime = new QTimeEdit(groupBox_13);
-        DelivTime->setObjectName(QString::fromUtf8("DelivTime"));
-        DelivTime->setGeometry(QRect(110, 360, 118, 40));
-        DelivTime->setFont(font8);
-        DelivTime->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
-""));
-        DelivTime->setFrame(false);
-        PayButton = new QPushButton(groupBox_13);
-        PayButton->setObjectName(QString::fromUtf8("PayButton"));
-        PayButton->setGeometry(QRect(220, 420, 140, 50));
-        QFont font9;
-        font9.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font9.setPointSize(12);
-        font9.setBold(true);
-        font9.setWeight(75);
-        PayButton->setFont(font9);
-        PayButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-
-        verticalLayout_4->addWidget(groupBox_13);
-
-        scrollArea_3->setWidget(scrollAreaWidgetContents_5);
-        tabWidget->addTab(tab_5, QString());
         tab_7 = new QWidget();
         tab_7->setObjectName(QString::fromUtf8("tab_7"));
         scrollArea_5 = new QScrollArea(tab_7);
@@ -569,13 +492,102 @@ public:
         scrollArea_5->setMaximumSize(QSize(391, 551));
         scrollArea_5->setStyleSheet(QString::fromUtf8("background-color: rgb(33, 33, 33);\n"
 "border:0;"));
+        scrollArea_5->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         scrollArea_5->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_5->setWidgetResizable(true);
         scrollAreaWidgetContents_7 = new QWidget();
         scrollAreaWidgetContents_7->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_7"));
-        scrollAreaWidgetContents_7->setGeometry(QRect(0, 0, 379, 951));
+        scrollAreaWidgetContents_7->setGeometry(QRect(0, -1002, 379, 1553));
         verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_7);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        label_4 = new QLabel(scrollAreaWidgetContents_7);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setMaximumSize(QSize(16777215, 40));
+        label_4->setFont(font5);
+        label_4->setWordWrap(true);
+
+        verticalLayout_6->addWidget(label_4);
+
+        groupBox_13 = new QGroupBox(scrollAreaWidgetContents_7);
+        groupBox_13->setObjectName(QString::fromUtf8("groupBox_13"));
+        groupBox_13->setMinimumSize(QSize(361, 550));
+        groupBox_13->setMaximumSize(QSize(361, 16777215));
+        groupBox_13->setFont(font2);
+        groupBox_13->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
+"border:0;"));
+        label_5 = new QLabel(groupBox_13);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(10, 60, 60, 40));
+        label_5->setFont(font8);
+        NameLabel = new QLineEdit(groupBox_13);
+        NameLabel->setObjectName(QString::fromUtf8("NameLabel"));
+        NameLabel->setGeometry(QRect(110, 60, 261, 40));
+        NameLabel->setFont(font8);
+        NameLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        NameLabel->setFrame(false);
+        label_6 = new QLabel(groupBox_13);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(10, 130, 71, 40));
+        label_6->setFont(font8);
+        HallCombo = new QComboBox(groupBox_13);
+        HallCombo->addItem(QString());
+        HallCombo->addItem(QString());
+        HallCombo->addItem(QString());
+        HallCombo->addItem(QString());
+        HallCombo->addItem(QString());
+        HallCombo->setObjectName(QString::fromUtf8("HallCombo"));
+        HallCombo->setGeometry(QRect(110, 130, 161, 40));
+        HallCombo->setFont(font8);
+        HallCombo->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        label_7 = new QLabel(groupBox_13);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setGeometry(QRect(10, 180, 101, 40));
+        label_7->setFont(font8);
+        RoomLine = new QLineEdit(groupBox_13);
+        RoomLine->setObjectName(QString::fromUtf8("RoomLine"));
+        RoomLine->setGeometry(QRect(110, 180, 80, 40));
+        RoomLine->setFont(font8);
+        RoomLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        RoomLine->setMaxLength(3);
+        RoomLine->setFrame(false);
+        label_8 = new QLabel(groupBox_13);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(10, 290, 101, 40));
+        label_8->setFont(font8);
+        label_8->setWordWrap(true);
+        DelivTime = new QTimeEdit(groupBox_13);
+        DelivTime->setObjectName(QString::fromUtf8("DelivTime"));
+        DelivTime->setGeometry(QRect(110, 290, 118, 40));
+        DelivTime->setFont(font8);
+        DelivTime->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
+""));
+        DelivTime->setFrame(false);
+        Noteslabel = new QLabel(groupBox_13);
+        Noteslabel->setObjectName(QString::fromUtf8("Noteslabel"));
+        Noteslabel->setGeometry(QRect(10, 380, 104, 40));
+        Noteslabel->setFont(font8);
+        Noteslabel->setWordWrap(true);
+        DelivNotes = new QLineEdit(groupBox_13);
+        DelivNotes->setObjectName(QString::fromUtf8("DelivNotes"));
+        DelivNotes->setGeometry(QRect(129, 390, 221, 150));
+        DelivNotes->setFont(font8);
+        DelivNotes->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        DelivNotes->setMaxLength(500);
+        DelivNotes->setFrame(false);
+        DelivNotes->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        PhoneLabel = new QLabel(groupBox_13);
+        PhoneLabel->setObjectName(QString::fromUtf8("PhoneLabel"));
+        PhoneLabel->setGeometry(QRect(10, 230, 101, 40));
+        PhoneLabel->setFont(font8);
+        PhoneInpute = new QLineEdit(groupBox_13);
+        PhoneInpute->setObjectName(QString::fromUtf8("PhoneInpute"));
+        PhoneInpute->setGeometry(QRect(110, 230, 261, 40));
+        PhoneInpute->setFont(font8);
+        PhoneInpute->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        PhoneInpute->setFrame(false);
+
+        verticalLayout_6->addWidget(groupBox_13);
+
         label_11 = new QLabel(scrollAreaWidgetContents_7);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setFont(font5);
@@ -627,10 +639,10 @@ public:
         CreditNumLine = new QLineEdit(groupBox_14);
         CreditNumLine->setObjectName(QString::fromUtf8("CreditNumLine"));
         CreditNumLine->setGeometry(QRect(130, 30, 230, 40));
-        QFont font10;
-        font10.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font10.setPointSize(14);
-        CreditNumLine->setFont(font10);
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font9.setPointSize(14);
+        CreditNumLine->setFont(font9);
         CreditNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         label_2 = new QLabel(groupBox_14);
         label_2->setObjectName(QString::fromUtf8("label_2"));
@@ -774,7 +786,12 @@ public:
         CompButton->setObjectName(QString::fromUtf8("CompButton"));
         CompButton->setMinimumSize(QSize(0, 45));
         CompButton->setMaximumSize(QSize(361, 45));
-        CompButton->setFont(font9);
+        QFont font10;
+        font10.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font10.setPointSize(12);
+        font10.setBold(true);
+        font10.setWeight(75);
+        CompButton->setFont(font10);
         CompButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
         verticalLayout_6->addWidget(CompButton);
@@ -806,8 +823,8 @@ public:
 
         groupBox_16 = new QGroupBox(scrollAreaWidgetContents_8);
         groupBox_16->setObjectName(QString::fromUtf8("groupBox_16"));
-        groupBox_16->setMinimumSize(QSize(371, 395));
-        groupBox_16->setMaximumSize(QSize(371, 525));
+        groupBox_16->setMinimumSize(QSize(361, 395));
+        groupBox_16->setMaximumSize(QSize(361, 525));
         groupBox_16->setFont(font);
         groupBox_16->setStyleSheet(QString::fromUtf8("\n"
 "border:0;\n"
@@ -823,25 +840,26 @@ public:
         FoodLabel->setWordWrap(true);
         label_21 = new QLabel(groupBox_16);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(10, 220, 131, 40));
+        label_21->setGeometry(QRect(10, 260, 131, 40));
         label_21->setFont(font8);
         FoodChoiceImage_2 = new QLabel(groupBox_16);
         FoodChoiceImage_2->setObjectName(QString::fromUtf8("FoodChoiceImage_2"));
         FoodChoiceImage_2->setGeometry(QRect(10, 50, 201, 131));
         FoodChoiceImage_2->setMinimumSize(QSize(201, 131));
         FoodChoiceImage_2->setMaximumSize(QSize(201, 131));
-        FoodChoiceImage_2->setFont(font1);
+        FoodChoiceImage_2->setFont(font2);
+        FoodChoiceImage_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         DelLabel = new QLabel(groupBox_16);
         DelLabel->setObjectName(QString::fromUtf8("DelLabel"));
-        DelLabel->setGeometry(QRect(150, 220, 151, 40));
+        DelLabel->setGeometry(QRect(150, 260, 151, 40));
         DelLabel->setFont(font8);
         label_22 = new QLabel(groupBox_16);
         label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setGeometry(QRect(10, 260, 131, 40));
+        label_22->setGeometry(QRect(10, 300, 131, 40));
         label_22->setFont(font8);
         CreditLabel = new QLabel(groupBox_16);
         CreditLabel->setObjectName(QString::fromUtf8("CreditLabel"));
-        CreditLabel->setGeometry(QRect(150, 260, 190, 40));
+        CreditLabel->setGeometry(QRect(150, 300, 190, 40));
         CreditLabel->setFont(font8);
         label_23 = new QLabel(groupBox_16);
         label_23->setObjectName(QString::fromUtf8("label_23"));
@@ -853,17 +871,25 @@ public:
         NameLabel_2->setFont(font8);
         RateButton = new QPushButton(groupBox_16);
         RateButton->setObjectName(QString::fromUtf8("RateButton"));
-        RateButton->setGeometry(QRect(150, 370, 161, 51));
-        RateButton->setFont(font9);
+        RateButton->setGeometry(QRect(180, 420, 161, 51));
+        RateButton->setFont(font10);
         RateButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         label_31 = new QLabel(groupBox_16);
         label_31->setObjectName(QString::fromUtf8("label_31"));
-        label_31->setGeometry(QRect(10, 300, 131, 40));
+        label_31->setGeometry(QRect(10, 340, 131, 40));
         label_31->setFont(font8);
         IDLabel = new QLabel(groupBox_16);
         IDLabel->setObjectName(QString::fromUtf8("IDLabel"));
-        IDLabel->setGeometry(QRect(150, 300, 190, 40));
+        IDLabel->setGeometry(QRect(150, 340, 190, 40));
         IDLabel->setFont(font8);
+        label_24 = new QLabel(groupBox_16);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(10, 220, 111, 40));
+        label_24->setFont(font8);
+        PhoneOut = new QLabel(groupBox_16);
+        PhoneOut->setObjectName(QString::fromUtf8("PhoneOut"));
+        PhoneOut->setGeometry(QRect(150, 220, 151, 40));
+        PhoneOut->setFont(font8);
 
         verticalLayout_7->addWidget(groupBox_16);
 
@@ -877,6 +903,7 @@ public:
         scrollArea_7->setMinimumSize(QSize(391, 551));
         scrollArea_7->setStyleSheet(QString::fromUtf8("border:0;\n"
 "background-color: rgb(33, 33, 33);"));
+        scrollArea_7->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_7->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_7->setWidgetResizable(true);
         scrollAreaWidgetContents_9 = new QWidget();
@@ -888,27 +915,32 @@ public:
         label_13->setObjectName(QString::fromUtf8("label_13"));
         label_13->setMinimumSize(QSize(0, 42));
         label_13->setMaximumSize(QSize(16777215, 42));
-        label_13->setFont(font3);
+        QFont font11;
+        font11.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font11.setPointSize(24);
+        label_13->setFont(font11);
 
         verticalLayout_8->addWidget(label_13);
 
         groupBox_17 = new QGroupBox(scrollAreaWidgetContents_9);
         groupBox_17->setObjectName(QString::fromUtf8("groupBox_17"));
-        groupBox_17->setMinimumSize(QSize(373, 430));
-        groupBox_17->setMaximumSize(QSize(373, 460));
-        groupBox_17->setStyleSheet(QString::fromUtf8("border:0;"));
+        groupBox_17->setMinimumSize(QSize(361, 430));
+        groupBox_17->setMaximumSize(QSize(361, 460));
+        groupBox_17->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
+"border:0;"));
         UploadButton = new QPushButton(groupBox_17);
         UploadButton->setObjectName(QString::fromUtf8("UploadButton"));
-        UploadButton->setGeometry(QRect(80, 110, 190, 41));
-        UploadButton->setFont(font9);
+        UploadButton->setGeometry(QRect(90, 270, 200, 41));
+        UploadButton->setFont(font10);
         UploadButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
 ""));
         FoodChoiceImage = new QLabel(groupBox_17);
         FoodChoiceImage->setObjectName(QString::fromUtf8("FoodChoiceImage"));
-        FoodChoiceImage->setGeometry(QRect(80, 170, 201, 131));
+        FoodChoiceImage->setGeometry(QRect(90, 320, 201, 131));
         FoodChoiceImage->setMinimumSize(QSize(201, 131));
         FoodChoiceImage->setMaximumSize(QSize(201, 131));
-        FoodChoiceImage->setFont(font1);
+        FoodChoiceImage->setFont(font2);
+        FoodChoiceImage->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label_30 = new QLabel(groupBox_17);
         label_30->setObjectName(QString::fromUtf8("label_30"));
         label_30->setGeometry(QRect(7, 20, 60, 51));
@@ -989,6 +1021,18 @@ public:
 "{\n"
 "border-image: url(:yelloStar.png);\n"
 "}"));
+        CommentLabel = new QLabel(groupBox_17);
+        CommentLabel->setObjectName(QString::fromUtf8("CommentLabel"));
+        CommentLabel->setGeometry(QRect(10, 100, 81, 51));
+        CommentLabel->setFont(font8);
+        CommentInput = new QLineEdit(groupBox_17);
+        CommentInput->setObjectName(QString::fromUtf8("CommentInput"));
+        CommentInput->setGeometry(QRect(90, 110, 260, 140));
+        CommentInput->setFont(font8);
+        CommentInput->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        CommentInput->setMaxLength(500);
+        CommentInput->setFrame(false);
+        CommentInput->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         verticalLayout_8->addWidget(groupBox_17);
 
@@ -997,24 +1041,36 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 407, 21));
-        menubar->setFont(font1);
-        menubar->setStyleSheet(QString::fromUtf8("QMenubar::tab:selected,\n"
-"QMenutab::tab:hover\n"
+        menubar->setGeometry(QRect(0, 0, 396, 22));
+        menubar->setFont(font);
+        menubar->setStyleSheet(QString::fromUtf8("QMenu::item{\n"
+" background-color: rgb(48, 48, 48);\n"
+" color: white;\n"
+" }\n"
+"\n"
+" QMenu::item:selected{\n"
+" background-color: rgb(66, 66, 66);\n"
+" color: white;\n"
+" } \n"
+"\n"
+"QMenuBar::item\n"
 "{\n"
-" border-top-color: #1D2A32;\n"
-"    border-color: #40494E;\n"
-"    color: black;\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #C1D8E8, stop: 1 #F0F5F8);\n"
+" background-color: rgb(48, 48, 48);\n"
+"}\n"
+"\n"
+"QMenuBar::item:selected\n"
+"{\n"
+"background-color: rgb(66, 66, 66);\n"
 "}"));
         menubar->setDefaultUp(false);
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
-        menuFile->setFont(font1);
+        menuFile->setFont(font);
         menuFile->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        statusbar->setFont(font);
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());
@@ -1078,8 +1134,12 @@ public:
         RoomLine->setText(QString());
         RoomLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "111", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Delivery Time:", nullptr));
-        PayButton->setText(QCoreApplication::translate("MainWindow", "Payment", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "Delivery", nullptr));
+        Noteslabel->setText(QCoreApplication::translate("MainWindow", "Delivery Notes:", nullptr));
+        DelivNotes->setInputMask(QString());
+        DelivNotes->setText(QString());
+        DelivNotes->setPlaceholderText(QCoreApplication::translate("MainWindow", "I'm sick. Leave at door please.", nullptr));
+        PhoneLabel->setText(QCoreApplication::translate("MainWindow", "Phone #:", nullptr));
+        PhoneInpute->setPlaceholderText(QCoreApplication::translate("MainWindow", "***-***-***", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Payment</p></body></html>", nullptr));
         groupBox->setTitle(QString());
         VisaRadio->setText(QCoreApplication::translate("MainWindow", "Visa", nullptr));
@@ -1178,6 +1238,8 @@ public:
         RateButton->setText(QCoreApplication::translate("MainWindow", "Leave Us a Rating", nullptr));
         label_31->setText(QCoreApplication::translate("MainWindow", "ID Number:", nullptr));
         IDLabel->setText(QCoreApplication::translate("MainWindow", "900152416", nullptr));
+        label_24->setText(QCoreApplication::translate("MainWindow", "Phone #:", nullptr));
+        PhoneOut->setText(QCoreApplication::translate("MainWindow", "***-***-****", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Confirmation", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Rating</p></body></html>", nullptr));
         groupBox_17->setTitle(QString());
@@ -1189,6 +1251,10 @@ public:
         Star3->setText(QString());
         Star4->setText(QString());
         Star5->setText(QString());
+        CommentLabel->setText(QCoreApplication::translate("MainWindow", "Comment:", nullptr));
+        CommentInput->setInputMask(QString());
+        CommentInput->setText(QString());
+        CommentInput->setPlaceholderText(QCoreApplication::translate("MainWindow", "Best Food Ever", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Rating", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
