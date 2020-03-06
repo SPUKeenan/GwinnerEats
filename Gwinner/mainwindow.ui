@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
-    <height>631</height>
+    <width>396</width>
+    <height>653</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -39,23 +39,31 @@ background-color: rgb(0, 0, 0);</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>411</width>
+      <width>391</width>
       <height>591</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Nirmala UI Semilight</family>
-      <pointsize>9</pointsize>
+      <pointsize>8</pointsize>
      </font>
     </property>
     <property name="mouseTracking">
      <bool>false</bool>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QTabBar::tab
+     <string notr="true">QTabBar::tab { height: 30px; width: 65px; }
+QTabBar::tab
 {
 background: #212121;
+border-color: rgb(48, 48, 48);
 }
 QTabBar::tab:selected,
 QTabBar::tab:hover
@@ -74,7 +82,7 @@ QTabBar::tab:hover
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -95,9 +103,15 @@ QTabBar::tab:hover
      <bool>false</bool>
     </property>
     <property name="tabBarAutoHide">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <widget class="QWidget" name="tab">
+     <property name="minimumSize">
+      <size>
+       <width>391</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <family>Candara</family>
@@ -128,6 +142,9 @@ QTabBar::tab:hover
        <string notr="true">border:0;
 background-color: rgb(33, 33, 33);</string>
       </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -139,7 +156,7 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>389</width>
+         <width>391</width>
          <height>814</height>
         </rect>
        </property>
@@ -161,7 +178,7 @@ background-color: rgb(33, 33, 33);</string>
           <property name="font">
            <font>
             <family>Nirmala UI Semilight</family>
-            <pointsize>24</pointsize>
+            <pointsize>23</pointsize>
            </font>
           </property>
           <property name="text">
@@ -196,7 +213,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="MonButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>40</y>
              <width>141</width>
              <height>81</height>
@@ -211,7 +228,8 @@ background-color: rgb(48, 48, 48);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">background-color: rgb(66, 66, 66);
+selection-color: rgb(190, 190, 190);</string>
            </property>
            <property name="text">
             <string>Monday</string>
@@ -220,7 +238,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="TuesButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>130</y>
              <width>141</width>
              <height>81</height>
@@ -244,7 +262,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="WedButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>220</y>
              <width>141</width>
              <height>81</height>
@@ -268,7 +286,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="ThurButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>310</y>
              <width>141</width>
              <height>81</height>
@@ -292,7 +310,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="FriButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>400</y>
              <width>141</width>
              <height>81</height>
@@ -316,7 +334,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="SatButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>490</y>
              <width>141</width>
              <height>81</height>
@@ -340,7 +358,7 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="SunButton">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>110</x>
              <y>580</y>
              <width>141</width>
              <height>81</height>
@@ -396,6 +414,9 @@ background-color: rgb(48, 48, 48);</string>
        <string notr="true">border:0;
 background-color: rgb(33, 33, 33);</string>
       </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -407,8 +428,8 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>379</width>
-         <height>614</height>
+         <width>391</width>
+         <height>551</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -436,13 +457,13 @@ background-color: rgb(33, 33, 33);</string>
           <property name="minimumSize">
            <size>
             <width>361</width>
-            <height>550</height>
+            <height>450</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>361</width>
-            <height>16777215</height>
+            <height>450</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -455,22 +476,22 @@ border:0;</string>
           <widget class="QPushButton" name="BreakButton">
            <property name="geometry">
             <rect>
-             <x>90</x>
-             <y>20</y>
-             <width>200</width>
-             <height>150</height>
+             <x>110</x>
+             <y>50</y>
+             <width>141</width>
+             <height>81</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="font">
@@ -491,22 +512,22 @@ border:0;</string>
           <widget class="QPushButton" name="LunButton">
            <property name="geometry">
             <rect>
-             <x>90</x>
-             <y>190</y>
-             <width>200</width>
-             <height>150</height>
+             <x>110</x>
+             <y>180</y>
+             <width>141</width>
+             <height>81</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="font">
@@ -527,22 +548,22 @@ border:0;</string>
           <widget class="QPushButton" name="DinButton">
            <property name="geometry">
             <rect>
-             <x>90</x>
-             <y>360</y>
-             <width>200</width>
-             <height>150</height>
+             <x>110</x>
+             <y>310</y>
+             <width>141</width>
+             <height>81</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>200</width>
-             <height>150</height>
+             <width>141</width>
+             <height>81</height>
             </size>
            </property>
            <property name="font">
@@ -597,6 +618,9 @@ border:0;</string>
        <string notr="true">background-color: rgb(33, 33, 33);
 border:0;</string>
       </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
@@ -607,8 +631,8 @@ border:0;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-479</y>
-         <width>379</width>
+         <y>0</y>
+         <width>391</width>
          <height>1030</height>
         </rect>
        </property>
@@ -917,11 +941,11 @@ background-color: rgb(48, 48, 48);</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_5">
+    <widget class="QWidget" name="tab_7">
      <attribute name="title">
-      <string>Delivery</string>
+      <string>Payment</string>
      </attribute>
-     <widget class="QScrollArea" name="scrollArea_3">
+     <widget class="QScrollArea" name="scrollArea_5">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -930,9 +954,24 @@ background-color: rgb(48, 48, 48);</string>
         <height>551</height>
        </rect>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>391</width>
+        <height>551</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>391</width>
+        <height>551</height>
+       </size>
+      </property>
       <property name="styleSheet">
-       <string notr="true">border:0;
-background-color: rgb(33, 33, 33);</string>
+       <string notr="true">background-color: rgb(33, 33, 33);
+border:0;</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -940,16 +979,16 @@ background-color: rgb(33, 33, 33);</string>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_5">
+      <widget class="QWidget" name="scrollAreaWidgetContents_7">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
-         <width>391</width>
-         <height>551</height>
+         <y>-1002</y>
+         <width>379</width>
+         <height>1553</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QLabel" name="label_4">
           <property name="maximumSize">
@@ -976,13 +1015,13 @@ background-color: rgb(33, 33, 33);</string>
          <widget class="QGroupBox" name="groupBox_13">
           <property name="minimumSize">
            <size>
-            <width>371</width>
-            <height>0</height>
+            <width>361</width>
+            <height>550</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>371</width>
+            <width>361</width>
             <height>16777215</height>
            </size>
           </property>
@@ -1002,7 +1041,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>130</y>
+             <y>60</y>
              <width>60</width>
              <height>40</height>
             </rect>
@@ -1021,7 +1060,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>110</x>
-             <y>130</y>
+             <y>60</y>
              <width>261</width>
              <height>40</height>
             </rect>
@@ -1046,7 +1085,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>200</y>
+             <y>130</y>
              <width>71</width>
              <height>40</height>
             </rect>
@@ -1065,7 +1104,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>110</x>
-             <y>200</y>
+             <y>130</y>
              <width>161</width>
              <height>40</height>
             </rect>
@@ -1109,7 +1148,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>250</y>
+             <y>180</y>
              <width>101</width>
              <height>40</height>
             </rect>
@@ -1128,7 +1167,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>110</x>
-             <y>250</y>
+             <y>180</y>
              <width>80</width>
              <height>40</height>
             </rect>
@@ -1162,7 +1201,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>360</y>
+             <y>290</y>
              <width>101</width>
              <height>40</height>
             </rect>
@@ -1184,7 +1223,7 @@ border:0;</string>
            <property name="geometry">
             <rect>
              <x>110</x>
-             <y>360</y>
+             <y>290</y>
              <width>118</width>
              <height>40</height>
             </rect>
@@ -1203,81 +1242,111 @@ border:0;</string>
             <bool>false</bool>
            </property>
           </widget>
-          <widget class="QPushButton" name="PayButton">
+          <widget class="QLabel" name="Noteslabel">
            <property name="geometry">
             <rect>
-             <x>220</x>
-             <y>420</y>
-             <width>140</width>
-             <height>50</height>
+             <x>10</x>
+             <y>380</y>
+             <width>104</width>
+             <height>40</height>
             </rect>
            </property>
            <property name="font">
             <font>
              <family>Nirmala UI Semilight</family>
              <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Delivery Notes:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="DelivNotes">
+           <property name="geometry">
+            <rect>
+             <x>129</x>
+             <y>390</y>
+             <width>221</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(66, 66, 66);</string>
            </property>
+           <property name="inputMask">
+            <string/>
+           </property>
            <property name="text">
-            <string>Payment</string>
+            <string/>
+           </property>
+           <property name="maxLength">
+            <number>500</number>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="placeholderText">
+            <string>I'm sick. Leave at door please.</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="PhoneLabel">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>230</y>
+             <width>101</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Phone #:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="PhoneInpute">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>230</y>
+             <width>261</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string>***-***-***</string>
            </property>
           </widget>
          </widget>
         </item>
-       </layout>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_7">
-     <attribute name="title">
-      <string>Payment</string>
-     </attribute>
-     <widget class="QScrollArea" name="scrollArea_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>391</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>391</width>
-        <height>551</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>391</width>
-        <height>551</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(33, 33, 33);
-border:0;</string>
-      </property>
-      <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOff</enum>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_7">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>379</width>
-         <height>951</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QLabel" name="label_11">
           <property name="font">
@@ -2214,13 +2283,13 @@ background-color: rgb(33, 33, 33);</string>
          <widget class="QGroupBox" name="groupBox_16">
           <property name="minimumSize">
            <size>
-            <width>371</width>
+            <width>361</width>
             <height>395</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>371</width>
+            <width>361</width>
             <height>525</height>
            </size>
           </property>
@@ -2282,7 +2351,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>220</y>
+             <y>260</y>
              <width>131</width>
              <height>40</height>
             </rect>
@@ -2323,6 +2392,9 @@ background-color: rgb(48, 48, 48);</string>
              <family>Candara</family>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Image of Food Here</string>
            </property>
@@ -2331,7 +2403,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>150</x>
-             <y>220</y>
+             <y>260</y>
              <width>151</width>
              <height>40</height>
             </rect>
@@ -2350,7 +2422,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>260</y>
+             <y>300</y>
              <width>131</width>
              <height>40</height>
             </rect>
@@ -2369,7 +2441,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>150</x>
-             <y>260</y>
+             <y>300</y>
              <width>190</width>
              <height>40</height>
             </rect>
@@ -2425,8 +2497,8 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="RateButton">
            <property name="geometry">
             <rect>
-             <x>150</x>
-             <y>370</y>
+             <x>180</x>
+             <y>420</y>
              <width>161</width>
              <height>51</height>
             </rect>
@@ -2450,7 +2522,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>300</y>
+             <y>340</y>
              <width>131</width>
              <height>40</height>
             </rect>
@@ -2469,7 +2541,7 @@ background-color: rgb(48, 48, 48);</string>
            <property name="geometry">
             <rect>
              <x>150</x>
-             <y>300</y>
+             <y>340</y>
              <width>190</width>
              <height>40</height>
             </rect>
@@ -2482,6 +2554,44 @@ background-color: rgb(48, 48, 48);</string>
            </property>
            <property name="text">
             <string>900152416</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_24">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>220</y>
+             <width>111</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Phone #:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="PhoneOut">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>220</y>
+             <width>151</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>***-***-****</string>
            </property>
           </widget>
          </widget>
@@ -2512,6 +2622,9 @@ background-color: rgb(48, 48, 48);</string>
       <property name="styleSheet">
        <string notr="true">border:0;
 background-color: rgb(33, 33, 33);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -2558,18 +2671,19 @@ background-color: rgb(33, 33, 33);</string>
          <widget class="QGroupBox" name="groupBox_17">
           <property name="minimumSize">
            <size>
-            <width>373</width>
+            <width>361</width>
             <height>430</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>373</width>
+            <width>361</width>
             <height>460</height>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">border:0;</string>
+           <string notr="true">background-color: rgb(48, 48, 48);
+border:0;</string>
           </property>
           <property name="title">
            <string/>
@@ -2577,9 +2691,9 @@ background-color: rgb(33, 33, 33);</string>
           <widget class="QPushButton" name="UploadButton">
            <property name="geometry">
             <rect>
-             <x>80</x>
-             <y>110</y>
-             <width>190</width>
+             <x>90</x>
+             <y>270</y>
+             <width>200</width>
              <height>41</height>
             </rect>
            </property>
@@ -2602,8 +2716,8 @@ background-color: rgb(33, 33, 33);</string>
           <widget class="QLabel" name="FoodChoiceImage">
            <property name="geometry">
             <rect>
-             <x>80</x>
-             <y>170</y>
+             <x>90</x>
+             <y>320</y>
              <width>201</width>
              <height>131</height>
             </rect>
@@ -2624,6 +2738,9 @@ background-color: rgb(33, 33, 33);</string>
             <font>
              <family>Candara</family>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
            <property name="text">
             <string>Image of food</string>
@@ -2788,6 +2905,62 @@ border-image: url(:yelloStar.png);
             <string/>
            </property>
           </widget>
+          <widget class="QLabel" name="CommentLabel">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>81</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Comment:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="CommentInput">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>110</y>
+             <width>260</width>
+             <height>140</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Nirmala UI Semilight</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66, 66, 66);</string>
+           </property>
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="maxLength">
+            <number>500</number>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="placeholderText">
+            <string>Best Food Ever</string>
+           </property>
+          </widget>
          </widget>
         </item>
        </layout>
@@ -2801,7 +2974,7 @@ border-image: url(:yelloStar.png);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>407</width>
+     <width>396</width>
      <height>22</height>
     </rect>
    </property>
@@ -2811,13 +2984,24 @@ border-image: url(:yelloStar.png);
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QMenubar::tab:selected,
-QMenutab::tab:hover
+    <string notr="true">QMenu::item{
+ background-color: rgb(48, 48, 48);
+ color: white;
+ }
+
+ QMenu::item:selected{
+ background-color: rgb(66, 66, 66);
+ color: white;
+ } 
+
+QMenuBar::item
 {
- border-top-color: #1D2A32;
-    border-color: #40494E;
-    color: black;
-    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #C1D8E8, stop: 1 #F0F5F8);
+ background-color: rgb(48, 48, 48);
+}
+
+QMenuBar::item:selected
+{
+background-color: rgb(66, 66, 66);
 }</string>
    </property>
    <property name="defaultUp">
