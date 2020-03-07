@@ -100,15 +100,6 @@ public:
     QRadioButton *DiscoRadio;
     QRadioButton *AmerRadio;
     QRadioButton *MealRadio;
-    QGroupBox *groupBox_14;
-    QLabel *label;
-    QLineEdit *CreditNumLine;
-    QLabel *label_2;
-    QLineEdit *CVCLine;
-    QLabel *label_3;
-    QLineEdit *CardNameLine;
-    QLabel *label_14;
-    QLineEdit *IDNumLine;
     QGroupBox *groupBox_15;
     QLabel *label_15;
     QLineEdit *StreetLine;
@@ -157,6 +148,17 @@ public:
     QPushButton *Star5;
     QLabel *CommentLabel;
     QLineEdit *CommentInput;
+    QGroupBox *groupBox_14;
+    QLabel *label;
+    QLineEdit *CreditNumLine;
+    QLabel *label_2;
+    QLineEdit *CVCLine;
+    QLabel *label_3;
+    QLineEdit *CardNameLine;
+    QLabel *label_14;
+    QLineEdit *IDNumLine;
+    QLabel *label_25;
+    QLineEdit *ExpLine;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -165,7 +167,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(396, 653);
+        MainWindow->resize(841, 653);
         MainWindow->setMinimumSize(QSize(391, 551));
         QFont font;
         font.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
@@ -497,7 +499,7 @@ public:
         scrollArea_5->setWidgetResizable(true);
         scrollAreaWidgetContents_7 = new QWidget();
         scrollAreaWidgetContents_7->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_7"));
-        scrollAreaWidgetContents_7->setGeometry(QRect(0, -1002, 379, 1553));
+        scrollAreaWidgetContents_7->setGeometry(QRect(0, -696, 379, 1247));
         verticalLayout_6 = new QVBoxLayout(scrollAreaWidgetContents_7);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         label_4 = new QLabel(scrollAreaWidgetContents_7);
@@ -625,58 +627,6 @@ public:
 
         verticalLayout_6->addWidget(groupBox);
 
-        groupBox_14 = new QGroupBox(scrollAreaWidgetContents_7);
-        groupBox_14->setObjectName(QString::fromUtf8("groupBox_14"));
-        groupBox_14->setMinimumSize(QSize(0, 300));
-        groupBox_14->setMaximumSize(QSize(361, 300));
-        groupBox_14->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
-"border:0;"));
-        label = new QLabel(groupBox_14);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(10, 30, 131, 40));
-        label->setFont(font8);
-        label->setWordWrap(true);
-        CreditNumLine = new QLineEdit(groupBox_14);
-        CreditNumLine->setObjectName(QString::fromUtf8("CreditNumLine"));
-        CreditNumLine->setGeometry(QRect(130, 30, 230, 40));
-        QFont font9;
-        font9.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font9.setPointSize(14);
-        CreditNumLine->setFont(font9);
-        CreditNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        label_2 = new QLabel(groupBox_14);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 90, 131, 40));
-        label_2->setFont(font8);
-        CVCLine = new QLineEdit(groupBox_14);
-        CVCLine->setObjectName(QString::fromUtf8("CVCLine"));
-        CVCLine->setGeometry(QRect(130, 90, 71, 40));
-        CVCLine->setFont(font8);
-        CVCLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        CVCLine->setMaxLength(3);
-        label_3 = new QLabel(groupBox_14);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 150, 131, 40));
-        label_3->setFont(font8);
-        CardNameLine = new QLineEdit(groupBox_14);
-        CardNameLine->setObjectName(QString::fromUtf8("CardNameLine"));
-        CardNameLine->setGeometry(QRect(130, 150, 230, 40));
-        CardNameLine->setFont(font8);
-        CardNameLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        label_14 = new QLabel(groupBox_14);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(10, 210, 101, 40));
-        label_14->setFont(font8);
-        label_14->setWordWrap(true);
-        IDNumLine = new QLineEdit(groupBox_14);
-        IDNumLine->setObjectName(QString::fromUtf8("IDNumLine"));
-        IDNumLine->setGeometry(QRect(130, 210, 230, 40));
-        IDNumLine->setFont(font8);
-        IDNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
-        IDNumLine->setMaxLength(9);
-
-        verticalLayout_6->addWidget(groupBox_14);
-
         groupBox_15 = new QGroupBox(scrollAreaWidgetContents_7);
         groupBox_15->setObjectName(QString::fromUtf8("groupBox_15"));
         groupBox_15->setMinimumSize(QSize(361, 320));
@@ -786,12 +736,12 @@ public:
         CompButton->setObjectName(QString::fromUtf8("CompButton"));
         CompButton->setMinimumSize(QSize(0, 45));
         CompButton->setMaximumSize(QSize(361, 45));
-        QFont font10;
-        font10.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font10.setPointSize(12);
-        font10.setBold(true);
-        font10.setWeight(75);
-        CompButton->setFont(font10);
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font9.setPointSize(12);
+        font9.setBold(true);
+        font9.setWeight(75);
+        CompButton->setFont(font9);
         CompButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
 
         verticalLayout_6->addWidget(CompButton);
@@ -872,7 +822,7 @@ public:
         RateButton = new QPushButton(groupBox_16);
         RateButton->setObjectName(QString::fromUtf8("RateButton"));
         RateButton->setGeometry(QRect(180, 420, 161, 51));
-        RateButton->setFont(font10);
+        RateButton->setFont(font9);
         RateButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
         label_31 = new QLabel(groupBox_16);
         label_31->setObjectName(QString::fromUtf8("label_31"));
@@ -915,10 +865,10 @@ public:
         label_13->setObjectName(QString::fromUtf8("label_13"));
         label_13->setMinimumSize(QSize(0, 42));
         label_13->setMaximumSize(QSize(16777215, 42));
-        QFont font11;
-        font11.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
-        font11.setPointSize(24);
-        label_13->setFont(font11);
+        QFont font10;
+        font10.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font10.setPointSize(24);
+        label_13->setFont(font10);
 
         verticalLayout_8->addWidget(label_13);
 
@@ -931,7 +881,7 @@ public:
         UploadButton = new QPushButton(groupBox_17);
         UploadButton->setObjectName(QString::fromUtf8("UploadButton"));
         UploadButton->setGeometry(QRect(90, 270, 200, 41));
-        UploadButton->setFont(font10);
+        UploadButton->setFont(font9);
         UploadButton->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);\n"
 ""));
         FoodChoiceImage = new QLabel(groupBox_17);
@@ -1038,10 +988,71 @@ public:
 
         scrollArea_7->setWidget(scrollAreaWidgetContents_9);
         tabWidget->addTab(tab_4, QString());
+        groupBox_14 = new QGroupBox(centralwidget);
+        groupBox_14->setObjectName(QString::fromUtf8("groupBox_14"));
+        groupBox_14->setGeometry(QRect(430, 70, 361, 350));
+        groupBox_14->setMinimumSize(QSize(0, 350));
+        groupBox_14->setMaximumSize(QSize(361, 300));
+        groupBox_14->setStyleSheet(QString::fromUtf8("background-color: rgb(48, 48, 48);\n"
+"border:0;"));
+        label = new QLabel(groupBox_14);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 30, 131, 40));
+        label->setFont(font8);
+        label->setWordWrap(true);
+        CreditNumLine = new QLineEdit(groupBox_14);
+        CreditNumLine->setObjectName(QString::fromUtf8("CreditNumLine"));
+        CreditNumLine->setGeometry(QRect(130, 30, 230, 40));
+        QFont font11;
+        font11.setFamily(QString::fromUtf8("Nirmala UI Semilight"));
+        font11.setPointSize(14);
+        CreditNumLine->setFont(font11);
+        CreditNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        label_2 = new QLabel(groupBox_14);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(10, 90, 131, 40));
+        label_2->setFont(font8);
+        CVCLine = new QLineEdit(groupBox_14);
+        CVCLine->setObjectName(QString::fromUtf8("CVCLine"));
+        CVCLine->setGeometry(QRect(130, 90, 71, 40));
+        CVCLine->setFont(font8);
+        CVCLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        CVCLine->setMaxLength(3);
+        label_3 = new QLabel(groupBox_14);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(10, 210, 131, 40));
+        label_3->setFont(font8);
+        CardNameLine = new QLineEdit(groupBox_14);
+        CardNameLine->setObjectName(QString::fromUtf8("CardNameLine"));
+        CardNameLine->setGeometry(QRect(130, 210, 230, 40));
+        CardNameLine->setFont(font8);
+        CardNameLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        label_14 = new QLabel(groupBox_14);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setGeometry(QRect(10, 270, 101, 40));
+        label_14->setFont(font8);
+        label_14->setWordWrap(true);
+        IDNumLine = new QLineEdit(groupBox_14);
+        IDNumLine->setObjectName(QString::fromUtf8("IDNumLine"));
+        IDNumLine->setGeometry(QRect(130, 270, 230, 40));
+        IDNumLine->setFont(font8);
+        IDNumLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        IDNumLine->setMaxLength(9);
+        label_25 = new QLabel(groupBox_14);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(10, 150, 101, 40));
+        label_25->setFont(font8);
+        label_25->setWordWrap(true);
+        ExpLine = new QLineEdit(groupBox_14);
+        ExpLine->setObjectName(QString::fromUtf8("ExpLine"));
+        ExpLine->setGeometry(QRect(130, 150, 71, 40));
+        ExpLine->setFont(font8);
+        ExpLine->setStyleSheet(QString::fromUtf8("background-color: rgb(66, 66, 66);"));
+        ExpLine->setMaxLength(5);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 396, 22));
+        menubar->setGeometry(QRect(0, 0, 841, 22));
         menubar->setFont(font);
         menubar->setStyleSheet(QString::fromUtf8("QMenu::item{\n"
 " background-color: rgb(48, 48, 48);\n"
@@ -1078,7 +1089,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1147,20 +1158,6 @@ public:
         DiscoRadio->setText(QCoreApplication::translate("MainWindow", "Discovery", nullptr));
         AmerRadio->setText(QCoreApplication::translate("MainWindow", "American", nullptr));
         MealRadio->setText(QCoreApplication::translate("MainWindow", "Meal Swipe", nullptr));
-        groupBox_14->setTitle(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Credit Card Number:</p></body></html>", nullptr));
-        CreditNumLine->setText(QString());
-        CreditNumLine->setPlaceholderText(QString());
-        label_2->setText(QCoreApplication::translate("MainWindow", "CVC:", nullptr));
-        CVCLine->setInputMask(QString());
-        CVCLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "000", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Name on Card:", nullptr));
-        CardNameLine->setInputMask(QString());
-        CardNameLine->setText(QString());
-        CardNameLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mark Smith", nullptr));
-        label_14->setText(QCoreApplication::translate("MainWindow", "ID # (only if Meal Swipe):", nullptr));
-        IDNumLine->setInputMask(QString());
-        IDNumLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "900123123", nullptr));
         groupBox_15->setTitle(QString());
         label_15->setText(QCoreApplication::translate("MainWindow", "Street Address:", nullptr));
         StreetLine->setText(QString());
@@ -1256,6 +1253,23 @@ public:
         CommentInput->setText(QString());
         CommentInput->setPlaceholderText(QCoreApplication::translate("MainWindow", "Best Food Ever", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Rating", nullptr));
+        groupBox_14->setTitle(QString());
+        label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Credit Card Number:</p></body></html>", nullptr));
+        CreditNumLine->setText(QString());
+        CreditNumLine->setPlaceholderText(QString());
+        label_2->setText(QCoreApplication::translate("MainWindow", "CVC:", nullptr));
+        CVCLine->setInputMask(QString());
+        CVCLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "000", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Name on Card:", nullptr));
+        CardNameLine->setInputMask(QString());
+        CardNameLine->setText(QString());
+        CardNameLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "Mark Smith", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "ID # (only if Meal Swipe):", nullptr));
+        IDNumLine->setInputMask(QString());
+        IDNumLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "900123123", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "Expiration Date: ", nullptr));
+        ExpLine->setInputMask(QCoreApplication::translate("MainWindow", "##/##", nullptr));
+        ExpLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "12/12", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 
