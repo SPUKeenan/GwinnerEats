@@ -1,2 +1,0 @@
-# GwinnerEats
-Gwinn Delivery App
