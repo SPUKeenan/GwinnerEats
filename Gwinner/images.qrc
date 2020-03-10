@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>greyStar.jpeg</file>
+        <file>yelloStar.png</file>
+    </qresource>
+</RCC>
