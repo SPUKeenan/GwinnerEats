@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "OrderRecord.h"
+
 
 #include <QMainWindow>
 
@@ -19,7 +19,9 @@ public:
 private slots:
     void on_actionExit_triggered();
 
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "OrderRecord.h"
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -13,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Star3->setCheckable(true);
     ui->Star4->setCheckable(true);
     ui->Star5->setCheckable(true);
+    Record();
 }
 
 MainWindow::~MainWindow()
@@ -25,3 +24,5 @@ void MainWindow::on_actionExit_triggered()
 {
     exit (1);
 }
+
+

@@ -82,7 +82,7 @@ QTabBar::tab:hover
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -156,8 +156,8 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>391</width>
-         <height>814</height>
+         <width>395</width>
+         <height>830</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -633,7 +633,7 @@ border:0;</string>
          <x>0</x>
          <y>0</y>
          <width>391</width>
-         <height>1030</height>
+         <height>1090</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -983,9 +983,9 @@ border:0;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1052</y>
-         <width>379</width>
-         <height>1603</height>
+         <y>0</y>
+         <width>391</width>
+         <height>1643</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_6">
