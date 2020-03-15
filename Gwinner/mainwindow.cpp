@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
+
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Star3->setCheckable(true);
     ui->Star4->setCheckable(true);
     ui->Star5->setCheckable(true);
-    Record();
+    if (ui->MonButton->isChecked() == true ){
+    }
+
 }
 
 MainWindow::~MainWindow()
@@ -25,4 +30,48 @@ void MainWindow::on_actionExit_triggered()
     exit (1);
 }
 
+void MainWindow::isReadOnly(bool state)
+{
+    ui->CreditNumLine->setReadOnly(state);
+    ui->CVCLine->setReadOnly(state);
+    ui->ExpLine->setReadOnly(state);
+    ui->CardNameLine->setReadOnly(state);
+    ui->StreetLine->setReadOnly(state);
+    ui->AptLine->setReadOnly(state);
+    ui->CityLine->setReadOnly(state);
+    ui->StateCombo->setEnabled(state);
+    ui->ZipLine->setReadOnly(state);
+    if ( state == false){
+        ui->IDNumLine->setReadOnly(true);
+        ui->StateCombo->setEnabled(true);
+    }
+    else {
+        ui->IDNumLine->setReadOnly(false);
+        ui->StateCombo->setEnabled(false);
+    }
+}
 
+void MainWindow::on_MealRadio_clicked()
+{
+    isReadOnly(true);
+}
+
+void MainWindow::on_AmerRadio_clicked()
+{
+    isReadOnly(false);
+}
+
+void MainWindow::on_VisaRadio_clicked()
+{
+    isReadOnly(false);
+}
+
+void MainWindow::on_MasterRadio_clicked()
+{
+    isReadOnly(false);
+}
+
+void MainWindow::on_DiscoRadio_clicked()
+{
+    isReadOnly(false);
+}
