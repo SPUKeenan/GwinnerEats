@@ -14,8 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Star3->setCheckable(true);
     ui->Star4->setCheckable(true);
     ui->Star5->setCheckable(true);
+<<<<<<< HEAD
     if (ui->MonButton->isChecked() == true ){
     }
+=======
+>>>>>>> meal swipe/credit card selections
 
 }
 
@@ -31,6 +34,7 @@ void MainWindow::on_actionExit_triggered()
 }
 
 void MainWindow::isReadOnly(bool state)
+<<<<<<< HEAD
 {
     ui->CreditNumLine->setReadOnly(state);
     ui->CVCLine->setReadOnly(state);
@@ -65,6 +69,53 @@ void MainWindow::on_VisaRadio_clicked()
 {
     isReadOnly(false);
 }
+=======
+ {
+     ui->CreditNumLine->setReadOnly(state);
+     ui->CVCLine->setReadOnly(state);
+     ui->ExpLine->setReadOnly(state);
+     ui->CardNameLine->setReadOnly(state);
+     ui->StreetLine->setReadOnly(state);
+     ui->AptLine->setReadOnly(state);
+     ui->CityLine->setReadOnly(state);
+     ui->StateCombo->setEnabled(state);
+     ui->ZipLine->setReadOnly(state);
+     if ( state == false){
+         ui->IDNumLine->setReadOnly(true);
+         ui->StateCombo->setEnabled(true);
+     }
+     else {
+         ui->IDNumLine->setReadOnly(false);
+         ui->StateCombo->setEnabled(false);
+     }
+ }
+
+  void MainWindow::on_MealRadio_clicked()
+ {
+     isReadOnly(true);
+ }
+
+  void MainWindow::on_AmerRadio_clicked()
+ {
+     isReadOnly(false);
+ }
+
+  void MainWindow::on_VisaRadio_clicked()
+ {
+     isReadOnly(false);
+ }
+
+
+  void MainWindow::on_MasterRadio_clicked()
+ {
+     isReadOnly(false);
+ }
+
+  void MainWindow::on_DiscoRadio_clicked()
+ {
+     isReadOnly(false);
+ }
+>>>>>>> meal swipe/credit card selections
 
 void MainWindow::on_MasterRadio_clicked()
 {
