@@ -30,16 +30,6 @@ private slots:
     void on_DiscoRadio_clicked();
 
 
-    void on_MealRadio_clicked();
-
-    void on_AmerRadio_clicked();
-
-    void on_VisaRadio_clicked();
-
-    void on_MasterRadio_clicked();
-
-    void on_DiscoRadio_clicked();
-
 private:
     Ui::MainWindow *ui;
 
