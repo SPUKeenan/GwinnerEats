@@ -19,25 +19,16 @@ public:
 private slots:
     void on_actionExit_triggered();
 
-<<<<<<< HEAD
     void on_MealRadio_clicked();
 
     void on_AmerRadio_clicked();
 
-=======
->>>>>>> master
     void on_VisaRadio_clicked();
 
     void on_MasterRadio_clicked();
 
     void on_DiscoRadio_clicked();
 
-<<<<<<< HEAD
-=======
-    void on_AmerRadio_clicked();
-
-    void on_MealRadio_clicked();
->>>>>>> master
 
 private:
     Ui::MainWindow *ui;

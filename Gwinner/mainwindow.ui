@@ -156,13 +156,8 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-<<<<<<< HEAD
-         <width>395</width>
-         <height>830</height>
-=======
          <width>391</width>
          <height>551</height>
->>>>>>> master
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">

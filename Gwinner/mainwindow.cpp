@@ -14,8 +14,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Star3->setCheckable(true);
     ui->Star4->setCheckable(true);
     ui->Star5->setCheckable(true);
-    if (ui->MonButton->isChecked() == true ){
-    }
 
 }
 
@@ -30,7 +28,6 @@ void MainWindow::on_actionExit_triggered()
     exit (1);
 }
 
-<<<<<<< HEAD
 void MainWindow::isReadOnly(bool state)
 {
     ui->CreditNumLine->setReadOnly(state);
@@ -52,32 +49,9 @@ void MainWindow::isReadOnly(bool state)
     }
 }
 
-void MainWindow::on_MealRadio_clicked()
-{
-    isReadOnly(true);
-}
-
-void MainWindow::on_AmerRadio_clicked()
-{
-    isReadOnly(false);
-}
-
 void MainWindow::on_VisaRadio_clicked()
 {
     isReadOnly(false);
-}
-
-void MainWindow::on_MasterRadio_clicked()
-{
-    isReadOnly(false);
-}
-
-void MainWindow::on_DiscoRadio_clicked()
-{
-    isReadOnly(false);
-=======
-void MainWindow::on_VisaRadio_clicked()
-{
     ui->CreditNumLine->setInputMask("");
     ui->CreditNumLine->setInputMask("4999-9999-9999-9999;#");
     ui->CreditNumLine->setReadOnly(false);
@@ -92,6 +66,7 @@ void MainWindow::on_VisaRadio_clicked()
 
 void MainWindow::on_MasterRadio_clicked()
 {
+    isReadOnly(false);
     ui->CreditNumLine->setInputMask("");
     ui->CreditNumLine->setInputMask("5999-9999-9999-9999;#");
     ui->CreditNumLine->setReadOnly(false);
@@ -106,6 +81,7 @@ void MainWindow::on_MasterRadio_clicked()
 
 void MainWindow::on_DiscoRadio_clicked()
 {
+    isReadOnly(false);
     ui->CreditNumLine->setInputMask("");
     ui->CreditNumLine->setInputMask("6999-9999-9999-9999;#");
     ui->CreditNumLine->setReadOnly(false);
@@ -120,6 +96,7 @@ void MainWindow::on_DiscoRadio_clicked()
 
 void MainWindow::on_AmerRadio_clicked()
 {
+    isReadOnly(false);
     ui->CreditNumLine->setInputMask("");
     ui->CreditNumLine->setInputMask("3999-999999-99999;#");
     ui->CreditNumLine->setReadOnly(false);
@@ -134,6 +111,7 @@ void MainWindow::on_AmerRadio_clicked()
 
 void MainWindow::on_MealRadio_clicked()
 {
+    isReadOnly(true);
     ui->CreditNumLine->setInputMask("");
     ui->CVCLine->setInputMask("");
     ui->CreditNumLine->setReadOnly(true);
@@ -144,5 +122,4 @@ void MainWindow::on_MealRadio_clicked()
     ui->CityLine->setReadOnly(true);
     ui->ZipLine->setReadOnly(true);
     ui->StateCombo->setDisabled(true);
->>>>>>> master
 }
