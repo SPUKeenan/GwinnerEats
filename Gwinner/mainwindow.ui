@@ -82,11 +82,7 @@ QTabBar::tab:hover
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
-     <number>0</number>
-=======
      <number>4</number>
->>>>>>> Zachary
     </property>
     <property name="iconSize">
      <size>
@@ -160,13 +156,8 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-<<<<<<< HEAD
          <width>391</width>
          <height>551</height>
-=======
-         <width>395</width>
-         <height>830</height>
->>>>>>> Zachary
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1062,11 +1053,7 @@ border:0;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-<<<<<<< HEAD
-         <y>0</y>
-=======
          <y>-1092</y>
->>>>>>> Zachary
          <width>391</width>
          <height>1643</height>
         </rect>

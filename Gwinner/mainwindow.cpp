@@ -1,10 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-<<<<<<< HEAD
 #include <iostream>
 
-using namespace std;
-=======
 #include <QTextStream>
 #include <QFile>
 #include <QDebug>
@@ -19,11 +16,12 @@ using namespace std;
 #include <QFile>
 #include <QDateTime>
 #include <QDir>
->>>>>>> Zachary
+
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->Star1->setCheckable(true);
@@ -96,7 +94,6 @@ void MainWindow::on_actionExit_triggered()
     exit (1);
 }
 
-<<<<<<< HEAD
 void MainWindow::isReadOnly(bool state)
 {
     ui->CreditNumLine->setReadOnly(state);
@@ -191,7 +188,7 @@ void MainWindow::on_MealRadio_clicked()
     ui->CityLine->setReadOnly(true);
     ui->ZipLine->setReadOnly(true);
     ui->StateCombo->setDisabled(true);
-=======
+}
 
 void MainWindow::on_CompButton_clicked()
 {
@@ -345,5 +342,4 @@ void MainWindow::on_DinButton_clicked()
     stream << endl;
     stream << endl;
      ui->tabWidget->setCurrentIndex(2);
->>>>>>> Zachary
 }

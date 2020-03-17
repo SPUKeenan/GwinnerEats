@@ -53,11 +53,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-<<<<<<< HEAD
 
     void isReadOnly(bool);
 
-=======
     struct Payment{
 
         QString name;
@@ -74,6 +72,5 @@ private:
         QString mealSelection;
         };
      QVector <Payment> PaymentVector;
->>>>>>> Zachary
 };
 #endif // MAINWINDOW_H
