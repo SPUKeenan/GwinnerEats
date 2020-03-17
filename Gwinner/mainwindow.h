@@ -3,7 +3,7 @@
 
 
 #include <QMainWindow>
-
+#include <QVector>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -18,6 +18,27 @@ public:
 
 private slots:
     void on_actionExit_triggered();
+    void writeJsonToFile();
+
+
+
+    void on_CompButton_clicked();
+
+    void on_MonButton_clicked();
+
+    void on_TuesButton_clicked();
+
+    void on_WedButton_clicked();
+
+    void on_ThurButton_clicked();
+
+    void on_FriButton_clicked();
+
+    void on_BreakButton_clicked();
+
+    void on_LunButton_clicked();
+
+    void on_DinButton_clicked();
 
     void on_MealRadio_clicked();
 
@@ -32,8 +53,27 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+<<<<<<< HEAD
 
     void isReadOnly(bool);
 
+=======
+    struct Payment{
+
+        QString name;
+        QString HallName;
+        QString RoomNumber;
+        QString PhoneNumber;
+        QString DeliveryTime;
+        QString DeliveryNotes;
+        QString CreditNumber;
+        QString StudentID;
+        QString InfoStreetName;
+        QString city;
+        QString daySelection;
+        QString mealSelection;
+        };
+     QVector <Payment> PaymentVector;
+>>>>>>> Zachary
 };
 #endif // MAINWINDOW_H
