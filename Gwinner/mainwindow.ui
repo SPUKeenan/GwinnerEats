@@ -82,7 +82,7 @@ QTabBar::tab:hover
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <property name="iconSize">
      <size>
@@ -105,7 +105,7 @@ QTabBar::tab:hover
     <property name="tabBarAutoHide">
      <bool>true</bool>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="DaySelectionTab">
      <property name="minimumSize">
       <size>
        <width>391</width>
@@ -434,7 +434,7 @@ background-color: rgb(100,100,100);
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="MealSelectionTab">
      <attribute name="title">
       <string>Meal</string>
      </attribute>
@@ -657,7 +657,7 @@ background-color: rgb(100,100,100);
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="FoodChoiceTab">
      <attribute name="title">
       <string>Food</string>
      </attribute>
@@ -703,7 +703,7 @@ border:0;</string>
          <x>0</x>
          <y>0</y>
          <width>391</width>
-         <height>1030</height>
+         <height>1090</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1011,7 +1011,7 @@ background-color: rgb(48, 48, 48);</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_7">
+    <widget class="QWidget" name="PaymentTab">
      <attribute name="title">
       <string>Payment</string>
      </attribute>
@@ -1053,9 +1053,9 @@ border:0;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1052</y>
-         <width>379</width>
-         <height>1603</height>
+         <y>-1092</y>
+         <width>391</width>
+         <height>1643</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -2342,7 +2342,7 @@ background-color: rgb(100,100,100);
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_6">
+    <widget class="QWidget" name="ConfirmationTab">
      <attribute name="title">
       <string>Confirmation</string>
      </attribute>
@@ -2531,7 +2531,7 @@ background-color: rgb(48, 48, 48);</string>
             <rect>
              <x>150</x>
              <y>260</y>
-             <width>151</width>
+             <width>201</width>
              <height>40</height>
             </rect>
            </property>
@@ -2734,7 +2734,7 @@ background-color: rgb(100,100,100);
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="RatingTab">
      <attribute name="title">
       <string>Rating</string>
      </attribute>
