@@ -16,10 +16,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    foodoption.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    foodoption.h \
     mainwindow.h
 
 FORMS += \
@@ -33,4 +35,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     images.qrc
 
-DISTFILES +=
+DISTFILES += \
+    WebScraper.py

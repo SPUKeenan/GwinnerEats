@@ -59,7 +59,7 @@ OBJECTS       = main.o \
 		qrc_images.o \
 		moc_mainwindow.o
 
-DIST          =  ..\Gwinner\mainwindow.h ..\Gwinner\main.cpp \
+DIST          = WebScraper.py ..\Gwinner\mainwindow.h ..\Gwinner\main.cpp \
 		..\Gwinner\mainwindow.cpp
 QMAKE_TARGET  = Gwinner
 DESTDIR        =  #avoid trailing-slash linebreak
@@ -591,7 +591,7 @@ moc_mainwindow.cpp: ../Gwinner/mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		moc_predefs.h \
 		C:/Qt/5.14.1/mingw73_64/bin/moc.exe
-	C:\Qt\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/kjlro/Documents/Github/GwinnerEats/build-Gwinner-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/moc_predefs.h -IC:/Qt/5.14.1/mingw73_64/mkspecs/win32-g++ -IC:/Users/kjlro/Documents/Github/GwinnerEats/Gwinner -IC:/Qt/5.14.1/mingw73_64/include -IC:/Qt/5.14.1/mingw73_64/include/QtWidgets -IC:/Qt/5.14.1/mingw73_64/include/QtGui -IC:/Qt/5.14.1/mingw73_64/include/QtANGLE -IC:/Qt/5.14.1/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\Gwinner\mainwindow.h -o moc_mainwindow.cpp
+	C:\Qt\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include "C:/Users/Levi/Desktop/School/Applications Programming/QT Projects/GwinnerEats/build-Gwinner-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/moc_predefs.h" -IC:/Qt/5.14.1/mingw73_64/mkspecs/win32-g++ -I"C:/Users/Levi/Desktop/School/Applications Programming/QT Projects/GwinnerEats/Gwinner" -IC:/Qt/5.14.1/mingw73_64/include -IC:/Qt/5.14.1/mingw73_64/include/QtWidgets -IC:/Qt/5.14.1/mingw73_64/include/QtGui -IC:/Qt/5.14.1/mingw73_64/include/QtANGLE -IC:/Qt/5.14.1/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\Gwinner\mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -842,66 +842,36 @@ mainwindow.o: ../Gwinner/mainwindow.cpp ../Gwinner/mainwindow.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtWebSockets/qwebsocket.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/QAbstractSocket \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qabstractsocket.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/QNetworkRequest \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QString \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QAction \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QComboBox \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qcombobox.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qvalidator.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qregularexpression.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qslider.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qstyle.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QMenu \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QRadioButton \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qradiobutton.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QScrollArea \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QTabWidget \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QTimeEdit \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qdatetimeedit.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/QNetworkProxy \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qnetworkproxy.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qhostaddress.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/QSslError \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qsslerror.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qsslcertificate.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/5.14.1/mingw73_64/include/QtCore/qdatetime.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtCore/qcalendar.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.14.1/mingw73_64/include/QtWidgets/QWidget
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qssl.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QFlags \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/QSslConfiguration \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qsslconfiguration.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qsslsocket.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtWebSockets/qwebsockets_global.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtWebSockets/qwebsocketprotocol.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QProcess \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/qprocess.h \
+		C:/Qt/5.14.1/mingw73_64/include/QtCore/QFile
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ..\Gwinner\mainwindow.cpp
 
 qrc_images.o: qrc_images.cpp 

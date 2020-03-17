@@ -82,7 +82,7 @@ QTabBar::tab:hover
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -627,13 +627,13 @@ border:0;</string>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
+      <widget class="QWidget" name="foodContainer">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
          <width>391</width>
-         <height>1030</height>
+         <height>551</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -657,284 +657,6 @@ border:0;</string>
           <property name="wordWrap">
            <bool>true</bool>
           </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="FoodImage1">
-          <property name="minimumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_3">
-          <property name="minimumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(48, 48, 48);
-border:0;</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <widget class="QLabel" name="FoodLabel1">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>211</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Nirmala UI Semilight</family>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="FoodImage2">
-          <property name="minimumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_4">
-          <property name="minimumSize">
-           <size>
-            <width>161</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>1000</width>
-            <height>1000</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border:0;
-background-color: rgb(48, 48, 48);</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <widget class="QLabel" name="FoodLabel2">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>211</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>211</width>
-             <height>81</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>211</width>
-             <height>81</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Nirmala UI Semilight</family>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Hello Gov</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="FoodImage3">
-          <property name="minimumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_5">
-          <property name="minimumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border:0;
-background-color: rgb(48, 48, 48);</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <widget class="QLabel" name="FoodLabel3">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>211</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Nirmala UI Semilight</family>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="FoodImage4">
-          <property name="minimumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>201</width>
-            <height>131</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_6">
-          <property name="minimumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>361</width>
-            <height>100</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border:0;
-background-color: rgb(48, 48, 48);</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <widget class="QLabel" name="FoodLabel4">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>211</width>
-             <height>81</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>211</width>
-             <height>81</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>211</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Nirmala UI Semilight</family>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
          </widget>
         </item>
        </layout>
@@ -983,7 +705,7 @@ border:0;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1052</y>
+         <y>0</y>
          <width>379</width>
          <height>1603</height>
         </rect>
@@ -3025,7 +2747,7 @@ border-image: url(:yelloStar.png);
      <x>0</x>
      <y>0</y>
      <width>406</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
