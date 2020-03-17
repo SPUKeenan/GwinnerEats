@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>406</width>
+    <width>401</width>
     <height>653</height>
    </rect>
   </property>
@@ -156,8 +156,13 @@ background-color: rgb(33, 33, 33);</string>
         <rect>
          <x>0</x>
          <y>0</y>
+<<<<<<< HEAD
          <width>395</width>
          <height>830</height>
+=======
+         <width>391</width>
+         <height>551</height>
+>>>>>>> master
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -194,13 +199,13 @@ background-color: rgb(33, 33, 33);</string>
           <property name="minimumSize">
            <size>
             <width>361</width>
-            <height>700</height>
+            <height>430</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
             <width>361</width>
-            <height>700</height>
+            <height>430</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -213,10 +218,10 @@ background-color: rgb(48, 48, 48);</string>
           <widget class="QPushButton" name="MonButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>40</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>10</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -228,8 +233,15 @@ background-color: rgb(48, 48, 48);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);
-selection-color: rgb(190, 190, 190);</string>
+            <string notr="true">#MonButton
+{
+background-color: rgb(66, 66, 66);
+
+}
+#MonButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Monday</string>
@@ -238,10 +250,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="TuesButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>130</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>70</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -253,7 +265,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#TuesButton
+{
+background-color: rgb(66, 66, 66);
+}
+#TuesButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Tuesday</string>
@@ -262,10 +281,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="WedButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>220</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>130</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -277,7 +296,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#WedButton
+{
+background-color: rgb(66, 66, 66);
+}
+#WedButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Wednesday</string>
@@ -286,10 +312,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="ThurButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>310</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>190</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -301,7 +327,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#ThurButton
+{
+background-color: rgb(66, 66, 66);
+}
+#ThurButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Thursday</string>
@@ -310,10 +343,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="FriButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>400</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>250</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -325,7 +358,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#FriButton
+{
+background-color: rgb(66, 66, 66);
+}
+#FriButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Friday</string>
@@ -334,10 +374,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="SatButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>490</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>310</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -349,7 +389,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#SatButton
+{
+background-color: rgb(66, 66, 66);
+}
+#SatButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Saturday</string>
@@ -358,10 +405,10 @@ selection-color: rgb(190, 190, 190);</string>
           <widget class="QPushButton" name="SunButton">
            <property name="geometry">
             <rect>
-             <x>110</x>
-             <y>580</y>
-             <width>141</width>
-             <height>81</height>
+             <x>130</x>
+             <y>370</y>
+             <width>111</width>
+             <height>51</height>
             </rect>
            </property>
            <property name="font">
@@ -373,7 +420,14 @@ selection-color: rgb(190, 190, 190);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#SunButton
+{
+background-color: rgb(66, 66, 66);
+}
+#SunButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Sunday</string>
@@ -503,7 +557,14 @@ border:0;</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#BreakButton
+{
+background-color: rgb(66, 66, 66);
+}
+#BreakButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Breakfast</string>
@@ -539,7 +600,14 @@ border:0;</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#LunButton
+{
+background-color: rgb(66, 66, 66);
+}
+#LunButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Lunch</string>
@@ -575,7 +643,14 @@ border:0;</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#DinButton
+{
+background-color: rgb(66, 66, 66);
+}
+#DinButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Dinner</string>
@@ -2254,7 +2329,14 @@ border:0;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(66, 66, 66);</string>
+           <string notr="true">#CompButton
+{
+background-color: rgb(66, 66, 66);
+}
+#CompButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
           </property>
           <property name="text">
            <string>Complete Payment</string>
@@ -2562,7 +2644,14 @@ background-color: rgb(48, 48, 48);</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);</string>
+            <string notr="true">#RateButton
+{
+background-color: rgb(66, 66, 66);
+}
+#RateButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Leave Us a Rating</string>
@@ -2756,8 +2845,14 @@ border:0;</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(66, 66, 66);
-</string>
+            <string notr="true">#UploadButton
+{
+background-color: rgb(66, 66, 66);
+}
+#UploadButton:pressed
+{
+background-color: rgb(100,100,100);
+}</string>
            </property>
            <property name="text">
             <string>Upload Image of Food:</string>
@@ -3024,7 +3119,7 @@ border-image: url(:yelloStar.png);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>406</width>
+     <width>401</width>
      <height>22</height>
     </rect>
    </property>
