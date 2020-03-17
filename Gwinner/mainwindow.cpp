@@ -42,7 +42,7 @@ Payment Info;
         Info.name = ui->NameLabel->text();
         Info.HallName =  Info.HallName = ui->HallCombo->currentText() + ", #: " +  ui->RoomLine->text();
         Info.PhoneNumber = Info.PhoneNumber = ui->PhoneInpute->text();
-         Info.DeliveryTime = Info.DeliveryTime = ui->DelivTime->text();
+        Info.DeliveryTime = Info.DeliveryTime = ui->DelivTime->text();
         Info.DeliveryNotes =  Info.DeliveryNotes = ui->DelivNotes->text();
         Info.CreditNumber = ui->CreditNumLine ->text();
         Info.StudentID = ui->IDNumLine ->text();
@@ -63,13 +63,13 @@ Payment Info;
         stream << "Hall Name: " << Info.HallName << endl;
         stream << "Phone Number: " << Info.PhoneNumber << endl;
         stream << "Delivery Time: " << Info.DeliveryTime << endl;
-        stream << "Credit Card number:"  <<Info.CreditNumber << endl;
+
         stream << "Student ID:"  << Info.StudentID << endl;
         stream << "Street Name:"  << Info.InfoStreetName << endl;
         stream << "City:"  << Info.city << endl;
         stream<<endl;
         stream<<endl;
-         stream << "Delivery Notes: " << Info.DeliveryNotes << endl;
+        stream << "Delivery Notes: " << Info.DeliveryNotes << endl;
         stream << "----------------------" <<endl;
         stream<<endl;
         stream<<endl;
@@ -242,4 +242,41 @@ void MainWindow::on_DinButton_clicked()
     stream << endl;
     stream << endl;
      ui->tabWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_SatButton_clicked()
+{
+    QFile file("/Users/zachary/1.txt");
+
+    if (!file.open(QIODevice::Append | QIODevice::Text)) {
+        std::cerr << "Cannot open file for writing: "
+                  << qPrintable(file.errorString()) << std::endl;
+        return;
+    }
+       QTextStream stream(&file);
+    Payment Info;
+    Info.daySelection = "Saturday";
+    stream << "Meal: " <<Info.mealSelection << endl;
+    stream << endl;
+    stream << endl;
+     ui->tabWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_SunButton_clicked()
+{
+    QFile file("/Users/zachary/1.txt");
+
+    if (!file.open(QIODevice::Append | QIODevice::Text)) {
+        std::cerr << "Cannot open file for writing: "
+                  << qPrintable(file.errorString()) << std::endl;
+        return;
+    }
+       QTextStream stream(&file);
+    Payment Info;
+    Info.mealSelection = "Sunday";
+    stream << "Meal: " <<Info.mealSelection << endl;
+    stream << endl;
+    stream << endl;
+     ui->tabWidget->setCurrentIndex(2);
+
 }

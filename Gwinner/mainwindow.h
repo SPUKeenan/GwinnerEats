@@ -39,6 +39,10 @@ private slots:
 
     void on_DinButton_clicked();
 
+    void on_SatButton_clicked();
+
+    void on_SunButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     struct Payment{
