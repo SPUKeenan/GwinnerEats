@@ -24,19 +24,15 @@ MainWindow::~MainWindow()
 void MainWindow::writeJsonToFile()
 {
 
-
-Payment Info;
-
-
         Info.name = ui->NameLabel->text();
         Info.HallName =  Info.HallName = ui->HallCombo->currentText() + ", #: " +  ui->RoomLine->text();
         Info.PhoneNumber = Info.PhoneNumber = ui->PhoneInpute->text();
-         Info.DeliveryTime = Info.DeliveryTime = ui->DelivTime->text();
+        Info.DeliveryTime = Info.DeliveryTime = ui->DelivTime->text();
         Info.DeliveryNotes =  Info.DeliveryNotes = ui->DelivNotes->text();
         Info.CreditNumber = ui->CreditNumLine ->text();
         Info.StudentID = ui->IDNumLine ->text();
         Info.InfoStreetName = ui-> StreetLine->text() + " " + "#" + ui->AptLine->text();
-       Info.city = ui->CityLine->text() + " " + ui->ZipLine->text();
+        Info.city = ui->CityLine->text() + " " + ui->ZipLine->text();
 
         QFile file("/Users/zachary/1.txt");
 
@@ -181,7 +177,7 @@ void MainWindow::on_CompButton_clicked()
 
 void MainWindow::on_MonButton_clicked()
 {
-    QFile file("/Users/zachary/1.txt");
+    QFile file(fileLocation);
 
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         std::cerr << "Cannot open file for writing: "
@@ -200,7 +196,7 @@ void MainWindow::on_MonButton_clicked()
 
 void MainWindow::on_TuesButton_clicked()
 {
-    QFile file("/Users/zachary/1.txt");
+    QFile file(fileLocation);
 
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         std::cerr << "Cannot open file for writing: "
@@ -218,7 +214,7 @@ void MainWindow::on_TuesButton_clicked()
 
 void MainWindow::on_WedButton_clicked()
 {
-    QFile file("/Users/zachary/1.txt");
+    QFile file(fileLocation);
 
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         std::cerr << "Cannot open file for writing: "
@@ -236,7 +232,7 @@ void MainWindow::on_WedButton_clicked()
 
 void MainWindow::on_ThurButton_clicked()
 {
-    QFile file("/Users/zachary/1.txt");
+    QFile file(fileLocation);
 
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         std::cerr << "Cannot open file for writing: "
@@ -289,24 +285,18 @@ void MainWindow::on_BreakButton_clicked()
      ui->tabWidget->setCurrentIndex(2);
 
 
-     QStringList wordList = getMenu("B", 1);
+     QStringList wordList = getMenu("B", getDay(Info.daySelection));
 
-     std::cout << QString::number(wordList.size()).toStdString();
+     createFoodOptions(wordList);
 
+    ui->foodOption1->setText(wordList[1]);
+    ui->foodOption2->setText(wordList[2]);
+    ui->foodOption3->setText(wordList[3]);
+    ui->foodOption4->setText(wordList[4]);
+    ui->foodOption5->setText(wordList[5]);
 
-     for(int i = 0; i < wordList.size()-1; i++){
-         QString buttonName = wordList.takeAt(i);
-         std::cout << buttonName.toStdString();
-         FoodOption* button = new FoodOption(wordList.takeAt(i), ui->foodContainer);
+     //std::cout << QString::number(wordList.size()).toStdString();
 
-         button->setStyleSheet("background-color: rgb(66, 66, 66);");
-         button->resize(200, 75);
-         button->move(100, 50+i*85);
-         setCentralWidget(ui->foodContainer);
-         //ui->foodContainer->addWidget(button);
-
-
-     }
 
 
 }
@@ -329,11 +319,21 @@ void MainWindow::on_LunButton_clicked()
       stream << endl;
        ui->tabWidget->setCurrentIndex(2);
 
+
+
+       QStringList wordList = getMenu("L", getDay(Info.daySelection));
+
+       createFoodOptions(wordList);
+       ui->foodOption1->setText(wordList[1]);
+       ui->foodOption2->setText(wordList[2]);
+       ui->foodOption3->setText(wordList[3]);
+       ui->foodOption4->setText(wordList[4]);
+       ui->foodOption5->setText(wordList[5]);
 }
 
 void MainWindow::on_DinButton_clicked()
 {
-    QFile file("/Users/zachary/1.txt");
+    QFile file(fileLocation);
 
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         std::cerr << "Cannot open file for writing: "
@@ -347,13 +347,23 @@ void MainWindow::on_DinButton_clicked()
     stream << endl;
     stream << endl;
      ui->tabWidget->setCurrentIndex(2);
+
+     QStringList wordList = getMenu("B", getDay(Info.daySelection));
+
+     createFoodOptions(wordList);
+
+     ui->foodOption1->setText(wordList[1]);
+     ui->foodOption2->setText(wordList[2]);
+     ui->foodOption3->setText(wordList[3]);
+     ui->foodOption4->setText(wordList[4]);
+     ui->foodOption5->setText(wordList[5]);
 }
 
 
 int MainWindow::getDay(QString day)
 {
     if(day == "Sunday")
-        return 0;
+        return 7;
     if(day == "Monday")
         return 1;
     if(day == "Tuesday")
@@ -461,4 +471,66 @@ QStringList MainWindow::getMenu(QString timeOfMeal, int date)
 
     return retVal; //I think it breaks because we return something that is empty?
 
+}
+
+void MainWindow::createFoodOptions(QStringList meals)
+{
+    int size = meals.size();
+    if(meals.size()>6)
+        size = 6;
+    for(int i = 0; i < 6; i++){
+        QString buttonName = meals.takeAt(i);
+        //std::cout << buttonName.toStdString();
+        FoodOption* button = new FoodOption(meals.takeAt(i), ui->foodContainer);
+        connect(button, SIGNAL(clicked()), this, SLOT(foodChoice()));
+        button->setStyleSheet("background-color: rgb(66, 66, 66);");
+                             //"QPushButton::hover{color: rgb(0, 0, 0);}");
+        button->resize(200, 75);
+        button->move(100, 50+i*85);
+        //setCentralWidget(ui->foodContainer);
+
+    }
+}
+
+
+void MainWindow::foodChoice() {
+    //Info.food = this->text();
+    std::cout << ui->tabWidget;
+    increasePage();
+}
+
+void MainWindow::increasePage()
+{
+    ui->tabWidget->setCurrentIndex(4);
+}
+
+
+void MainWindow::on_foodOption1_clicked()
+{
+    Info.food = ui->foodOption1->text();
+    ui->tabWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_foodOption2_clicked()
+{
+    Info.food = ui->foodOption1->text();
+    ui->tabWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_foodOption5_clicked()
+{
+    Info.food = ui->foodOption1->text();
+    ui->tabWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_foodOption4_clicked()
+{
+    Info.food = ui->foodOption1->text();
+    ui->tabWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_foodOption3_clicked()
+{
+    Info.food = ui->foodOption1->text();
+    ui->tabWidget->setCurrentIndex(3);
 }

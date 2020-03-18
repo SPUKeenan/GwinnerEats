@@ -1,3 +1,117 @@
 Meal: Breakfast
 
 
+Meal: Dinner
+
+
+--------CLIENT--------
+
+Day of the week: Monday
+Meal: Dinner
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+Meal: Breakfast
+
+
+--------CLIENT--------
+
+Day of the week: Monday
+Meal: Breakfast
+
+

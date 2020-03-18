@@ -36,6 +36,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QString fileLocation = "C:\\Users\\Levi\\Desktop\\School\\Applications Programming\\QT Projects\\GwinnerEats\\Gwinner\\1.txt";
+    Ui::MainWindow *ui;
 
 
 private slots:
@@ -72,10 +73,21 @@ private slots:
 
     void on_DiscoRadio_clicked();
 
+    void foodChoice();
+
+    void on_foodOption1_clicked();
+
+    void on_foodOption2_clicked();
+
+    void on_foodOption5_clicked();
+
+    void on_foodOption4_clicked();
+
+    void on_foodOption3_clicked();
 
 private:
-    Ui::MainWindow *ui;
 
+    void increasePage();
     void isReadOnly(bool);
 
     int getDay(QString);
@@ -83,6 +95,8 @@ private:
     QStringList loadFile();
 
     QStringList getMenu(QString timeOfMeal, int date);
+
+    void createFoodOptions(QStringList meals);
 
 
     struct Payment{
@@ -99,7 +113,11 @@ private:
         QString city;
         QString daySelection;
         QString mealSelection;
+        QString food;
         };
      QVector <Payment> PaymentVector;
+
+public:
+     Payment Info;
 };
 #endif // MAINWINDOW_H

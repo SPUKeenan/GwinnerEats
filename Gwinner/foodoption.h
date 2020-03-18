@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QWidget>
 #include <QPushButton>
+#include "mainwindow.h"
+#include "iostream"
 
 class FoodOption : public QPushButton
 {

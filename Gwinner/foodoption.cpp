@@ -1,7 +1,9 @@
 #include "foodoption.h"
 #include "mainwindow.h"
-#include "iostream"
+
 
 void FoodOption::foodChoice() {
-    std::cout << this->text().toStdString();
+    //MainWindow::Info.food = this->text();
+    //std::cout << this->text().toStdString();
+
 }
